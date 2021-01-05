@@ -4,6 +4,7 @@ const { check, validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs')
 const { loginUser, logoutUser } = require('../auth')
 
+// This is a comment
 
 //setup
 const db = require('../db/models')
