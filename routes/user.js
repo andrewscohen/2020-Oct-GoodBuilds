@@ -171,7 +171,7 @@ router.post('/login', csrfProtection, loginValidators,
 // END OF LOGIN ROUTES
 
 // START OF LOGOUT ROUTES
-router.post('/user/logout', (req, res) => {
+router.post('/logout', (req, res) => {
   logoutUser(req, res);
   res.redirect('/');
 });

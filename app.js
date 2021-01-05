@@ -1,30 +1,38 @@
+//REQUIREMENTS
 const createError = require('http-errors');
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-const cookieParser = require('cookie-parser');
-const { sequelize } = require('./db/models');
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+//IMPORTS
+const { sessionSecret } = require('./config');
+const { sequelize } = require('./db/models');
+const { restoreUser } = require('./auth');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/user');
 
-const app = express();
 
-// view engine setup
+//APP SETUP
+const app = express();
 app.set('view engine', 'pug');
 
+//MIDDLEWARE
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser(sessionSecret));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(restoreUser);
 
-// set up session middleware
 const store = new SequelizeStore({ db: sequelize });
 
+//ROUTES
 app.use(
   session({
+    name: 'good-builds.sid',
     secret: 'superSecret',
     store,
     saveUninitialized: false,
