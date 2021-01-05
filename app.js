@@ -25,21 +25,20 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser(sessionSecret));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(restoreUser);
 
 const store = new SequelizeStore({ db: sequelize });
 
 //ROUTES
 app.use(
   session({
-    name: 'good-builds.sid',
-    secret: 'superSecret',
+    secret: sessionSecret,
     store,
     saveUninitialized: false,
     resave: false,
   })
 );
 
+app.use(restoreUser);
 // create Session table if it doesn't already exist
 store.sync();
 
