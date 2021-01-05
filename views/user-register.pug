@@ -3,16 +3,17 @@ include utils.pug
 
 block content
   +validationErrorSummary(errors)
-  form(action='/users/register' method='post')
-    input(type='hidden' name='_csrf' value=csrfToken)
-    +field('User Name','userName', user.userName)
-    +field('First Name', 'firstName', user.firstName)
-    +field('Last Name', 'lastName', user.lastName)
-    +field('Email Address', 'email', user.email)
-    +field('Password', 'password', user.password, 'password')
-    +field('Confirm Password', 'confirmPassword', '', 'password')
-    div(class='py-4')
-      button(type='submit' class='btn btn-primary') Register
-      a(href='/' class='btn btn-warning ml-2') Cancel
-  div
-    p: a(href='/user/login') Already have an account?
+  div(class='forms')
+    h4(class='formHeader') Sign up
+    form(action='/users/register' method='post')
+      input(type='hidden' name='_csrf' value=csrfToken)
+      +field('text', 'User Name', null, user.userName, 'User Name')
+      +field('text', 'First Name', null, user.firstName, 'First Name')
+      +field('text', 'Last Name', null, user.lastName, 'Last Name')
+      +field('email', 'Email Address', null, user.email, 'Email')
+      +field('password', 'Password', null, user.password, 'Password')
+      +field('password', 'Confirm Password', null, '', 'Confirm Password')
+      div(class='py-4')
+        button(type='submit' class='button') Submit
+  //- div
+  //-   p: a(href='/user/login') Already have an account?
