@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('navbar-home', {} );
+  res.send('message');
 });
 
 module.exports = router;

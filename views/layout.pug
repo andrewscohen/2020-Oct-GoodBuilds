@@ -3,11 +3,26 @@ html
   head
       block head
         title GoodBuilds - #{title}
+        link(rel='stylesheet' href='/stylesheets/navbar.css' type='text/css')
         link(rel='stylesheet' href='/stylesheets/styles.css' type='text/css')
-       
-
   body
-    block content
+    nav(class='navbar_login')
+      span
+        a(href='/'): img(src="/assets/logo-placeholder.png" id='navbar_logo')
+      div(class='navbar_login-right')
+        div(class='navbar-input-container')
+          input(type='text' name='search' placeholder='Find a project' id="login_search")
+          img(src='/assets/loupe.svg' id='icon_img')
+        span(class='navbar_menu')
+          li(class='navbar_button'): a(href="/users/login" type='button')
+            img(src='/assets/userLogo.svg' id='navbar_login--icon')
+            label(id='navbar_login--icontext') Log In
+          li(class='navbar_button'): a(href="#" type='button') Demo User
+          div(class='logoutBtn')
+            form(action='/users/logout' method='post')
+              li(class='navbar_button'): a(href="#" type='button') Log Out
+  block content
+
     //- nav(class='navbar navbar-expand-lg navbar-dark bg-primary')
     //-     a(class='navbar-brand' href='/') GoodBuilds
     //-     button(class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation')
