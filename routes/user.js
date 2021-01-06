@@ -22,6 +22,7 @@ router.get('/register', csrfProtection, (req, res) => {
   });
 });
 
+
 // router.get('/', function (req, res, next) {
 //   res.send('respond with a resource');
 // });
@@ -104,7 +105,7 @@ router.post('/register', csrfProtection, userValidators,
       const hashedPassword = await bcrypt.hash(password, 10);
       user.hashedPassword = hashedPassword;
       await user.save();
-      // loginUser(req, res, user);
+      loginUser(req, res, user);
       res.redirect('/');
     } else {
       const errors = validatorErrors.array().map((error) => error.msg);
@@ -153,6 +154,7 @@ router.post('/login', csrfProtection, loginValidators,
 
         if (passwordMatch) {
           loginUser(req, res, user);
+          console.log('YOU ARE LOGGED IN:  ', req.session);
           return res.redirect('/');
         }
       }
@@ -174,7 +176,21 @@ router.post('/login', csrfProtection, loginValidators,
 // START OF LOGOUT ROUTES
 router.post('/logout', (req, res) => {
   logoutUser(req, res);
+  console.log('YOU ARE LOGGED OUT:  ', req.session);
   res.redirect('/');
 });
 // END OF LOGOUT ROUTES
+
+// START OF DEMO ROUTE
+router.post(
+  "/demo",
+  asyncHandler(async (req, res) => {
+    const email = "demo@demo.com";
+    const user = await db.User.findOne({ where: { email } });
+    loginUser(req, res, user);
+    console.log('YOU ARE THE DEMO USER', req.session);
+    res.redirect("/");
+  }));
+
+
 module.exports = router;

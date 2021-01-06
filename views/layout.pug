@@ -14,13 +14,15 @@ html
           input(type='text' name='search' placeholder='Find a project' id="login_search")
           img(src='/assets/loupe.svg' id='icon_img')
         span(class='navbar_menu')
-          li(class='navbar_button'): a(href="/users/login" type='button')
+          div(class='navbar_button'): a(href="/users/login" type='button')
             img(src='/assets/userLogo.svg' id='navbar_login--icon')
             label(id='navbar_login--icontext') Log In
-          li(class='navbar_button'): a(href="#" type='button') Demo User
+          div(class='navbar_button')
+            form(action="/users/demo" method="post")
+              button(type='submit' class='button') Demo User
           div(class='logoutBtn')
             form(action='/users/logout' method='post')
-              li(class='navbar_button'): a(href="#" type='button') Log Out
+              div(class='navbar_button'): button(type='submit' class='button') Log Out
   block content
 
     //- nav(class='navbar navbar-expand-lg navbar-dark bg-primary')
