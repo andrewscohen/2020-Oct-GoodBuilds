@@ -8,8 +8,13 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.TEXT
   }, {});
   Project.associate = function (models) {
-    Project.belongsTo(models.UserProject, { foreignKey: 'projectId' })
-    Project.belongsTo(models.Review, { foreignKey: 'projectId' })
+    const projectUserMap = {
+      foreignKey: 'projectId',
+      through: 'UserProject',
+      otherKey: 'userId'
+    }
+    Project.belongsToMany(models.User, projectUserMap);
+    Project.hasMany(models.Review, { foreignKey: 'projectId' });
   };
   return Project;
 };

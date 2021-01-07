@@ -7,8 +7,6 @@ module.exports = (sequelize, DataTypes) => {
     buildStatus: DataTypes.STRING
   }, {});
   UserProject.associate = function (models) {
-    UserProject.belongsTo(models.User, { foreignKey: 'userId' })
-    UserProject.hasMany(models.Project, { foreignKey: 'projectId' })
   };
   return UserProject;
 };
