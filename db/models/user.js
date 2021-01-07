@@ -33,6 +33,7 @@ module.exports = (sequelize, DataTypes) => {
     }
     User.belongsToMany(models.Project, userProjectMap);
     User.hasMany(models.Review, { foreignKey: 'userId' });
+    User.hasMany(models.UserProject, { foreignKey: 'userId' });
   };
   return User;
 };
