@@ -1,0 +1,8 @@
+.furniture_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: fit-content;
+  /* grid-gap: 1em; */
+  justify-content: center;
+}
