@@ -7,8 +7,8 @@ const { csrfProtection, asyncHandler } = require('./utils')
 /* GET home page. */
 router.get('/', csrfProtection, (req, res) => {
   const user = db.User.build()
-  res.render('user-register', {
-    title: 'Register',
+  res.render('home-page', {
+    title: 'Home',
     user,
     csrfToken: req.csrfToken(),
   });
