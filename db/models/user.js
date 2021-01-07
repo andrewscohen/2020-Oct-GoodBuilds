@@ -26,7 +26,14 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {});
   User.associate = function (models) {
-    // associations can be defined here
+    const userProjectMap = {
+      foreignKey: 'userId',
+      through: 'UserProject',
+      otherKey: 'projectId'
+    }
+    User.belongsToMany(models.Project, userProjectMap);
+    User.hasMany(models.Review, { foreignKey: 'userId' });
+    User.hasMany(models.UserProject, { foreignKey: 'userId' });
   };
   return User;
 };
