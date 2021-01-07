@@ -1,0 +1,49 @@
+extends layout.pug
+block content
+    h1 FURNITURE
+    //- these can either all be different get routes or the same route with
+    //- different where clause based on the link they click.
+    //- potentially make the psuedo forms where fields are hidden
+
+    //-  I realized that the answer to the question to make the route for
+    //- those buttons/links a GET route to something like /projects/furniture-type/:furnitureType
+    //- and the links for each would be href='/projects/furniture-type/couches', then in the route you pull
+    //- out couches using `req.params.furnitureType` and query your database by querying the projects table
+    //- where furnitureType === req.params.furnitureType
+    div(class='furniture_container')
+        div(class='furniture_type_icon')
+            a(href='/users/register'): img(src="/assets/logo-placeholder.png" id='navbar_logo')
+            p label1
+        div(class='furniture_type_icon')
+            a(href='/users/register'): img(src="/assets/logo-placeholder.png" id='navbar_logo')
+            p label2
+        div(class='furniture_type_icon')
+            a(href='/users/register'): img(src="/assets/logo-placeholder.png" id='navbar_logo')
+            p label3
+        div(class='furniture_type_icon')
+            a(href='/users/register'): img(src="/assets/logo-placeholder.png" id='navbar_logo')
+            p label4
+        div(class='furniture_type_icon')
+            a(href='/users/register'): img(src="/assets/logo-placeholder.png" id='navbar_logo')
+            p label5
+        div(class='furniture_type_icon')
+            a(href='/users/register'): img(src="/assets/logo-placeholder.png" id='navbar_logo')
+            p label6
+        div(class='furniture_type_icon')
+            a(href='/users/register'): img(src="/assets/logo-placeholder.png" id='navbar_logo')
+            p label7
+        div(class='furniture_type_icon')
+            a(href='/users/register'): img(src="/assets/logo-placeholder.png" id='navbar_logo')
+            p label8
+        div(class='furniture_type_icon')
+            a(href='/users/register'): img(src="/assets/logo-placeholder.png" id='navbar_logo')
+            p label9
+        div(class='furniture_type_icon')
+            a(href='/users/register'): img(src="/assets/logo-placeholder.png" id='navbar_logo')
+            p label10
+        div(class='furniture_type_icon')
+            a(href='/users/register'): img(src="/assets/logo-placeholder.png" id='navbar_logo')
+            p label11
+        div(class='furniture_type_icon')
+            a(href='/users/register'): img(src="/assets/logo-placeholder.png" id='navbar_logo')
+            p label12
