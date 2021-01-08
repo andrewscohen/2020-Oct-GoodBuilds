@@ -6,3 +6,15 @@
   /* grid-gap: 1em; */
   justify-content: center;
 }
+
+/* .furniture_type_icon {
+  height: 20em;
+  width: 20em;
+} */
+
+#furniture_logo {
+  height: 20em;
+  width: 20em;
+  border: 1px solid black;
+  border-radius: 50%;
+}

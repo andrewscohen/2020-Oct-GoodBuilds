@@ -18,3 +18,4 @@ module.exports = {
     seederStorage: 'sequelize',
   }
 };
+// this is a comment
