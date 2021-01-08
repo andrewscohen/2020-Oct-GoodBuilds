@@ -1,0 +1,9 @@
+extends layout.pug
+block content
+    h1= title.toUpperCase()
+
+    div(class='furniture-display')
+        each furniture in furnitureTypes
+            div= furniture.name
+            div(class='furniture-image')
+                img(src= furniture.imgLink )
