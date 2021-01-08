@@ -1,10 +1,9 @@
 body {
-  background-image: url("/assets/1.svg");
+  background-image: url(“/assets/1.svg”);
   background-repeat: none;
   background-size: cover;
   margin: 0;
 }
-
 .navbar_login {
   display: flex;
   justify-content: space-between;
@@ -18,7 +17,6 @@ body {
   height: 100%;
   width:auto;
 }
-
 #login_search {
   height: 45px;
   border-style: solid;
@@ -27,14 +25,11 @@ body {
   width:400px;
   border-radius: 6px;
 }
-
 #login_search::placeholder {
   padding-left: 10px;
   font-size: 15px;
   font-family: Arial;
 }
-
-
 #icon_img {
   height: 15px;
   width: 15px;
@@ -42,19 +37,16 @@ body {
   right: 10%;
   top: 2px;
 }
-
 .navbar-input-container {
   height: fit-content;
   align-self: center;
   padding-right: 50px;
 }
-
 .navbar_menu {
   display: flex;
   list-style: none;
   align-items: center;
 }
-
 .navbar_menu a {
   text-decoration: none;
   border: solid 3px black;
@@ -66,25 +58,20 @@ body {
   font-family: Arial;
   font-weight: bold;
   background-color:rgba(255, 244, 244, 0.2)
-
 }
-
 .navbar_menu li {
   height: fit-content;
 }
-
 #navbar_login--icon {
   height: 15px;
 }
 #navbar_login--icontext {
   padding-left: 5px;
 }
-
 .navbar_login-right {
   display: flex;
   margin-right: 1%;
 }
-
 .navbar_menu a:hover {
   background-color:rgba(255, 255, 255, 0.4);
   box-shadow: 4px 5px 10px 0px rgba(119, 104, 104, 0.753);
