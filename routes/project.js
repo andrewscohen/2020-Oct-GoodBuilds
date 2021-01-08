@@ -72,12 +72,16 @@ router.get('/project/edit/:id(\\d+)', csrfProtection,
     asyncHandler(async (req, res) => {
         const projectId = parseInt(req.params.id, 10);
         const project = await db.Project.findByPk(projectId);
+        const reviews = await db.Review.findAll({ where: { projectId: projectId }, include: { model: db.User } })
+
         res.render('project-display', {
             title: 'Edit Project',
-            project,
+            project, reviews, projectId,
             csrfToken: req.csrfToken(),
         });
     }));
+
+
 
 router.put('/project/edit/:id(\\d+)', csrfProtection, projectValidators,
     asyncHandler(async (req, res) => {
@@ -134,5 +138,8 @@ router.post('/project/delete/:id(\\d+)', csrfProtection,
         await project.destroy();
         res.redirect('/projects');
     }));
+
+
+
 
 module.exports = router;

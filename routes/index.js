@@ -14,6 +14,15 @@ router.get('/', csrfProtection, (req, res) => {
   });
 });
 
-
+router.post(
+  "/reviews",
+  asyncHandler(async (req, res) => {
+    // console.log(req.session.user.id)
+    const { difficultyLevel, content, rating, completionTime, userId } = req.body;
+    const review = await db.Review.create({ difficultyLevel, content, rating, completionTime, userId: req.session.user.id });
+    console.log('Saved Review!')
+    res.json({ review });
+  })
+);
 
 module.exports = router;
