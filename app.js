@@ -14,6 +14,7 @@ const { restoreUser } = require('./auth');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/user');
 const projectRouter = require('./routes/project');
+const furnitureRouter = require('./routes/furnitureType');
 
 
 //APP SETUP
@@ -46,6 +47,8 @@ store.sync();
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/', projectRouter);
+app.use('/furniture-type', furnitureRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
