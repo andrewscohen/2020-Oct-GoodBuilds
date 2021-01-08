@@ -2,13 +2,23 @@ extends layout
 include utils.pug
 
 block content
-    .projectContainer
-        .leftContainer
-            span.leftSpan= project.name
-            span.leftSpan= project.brand
-            span.leftSpan= project.furnitureType
-            span.leftSpan= project.serialNumber
-        .reviews
-        .description
-        .img
-        
+    .projectcontainer
+        .projectgrid
+            img(src='https://www.ikea.com/us/en/images/products/brimnes-tv-storage-combination-glass-doors-white__0619452_PE689095_S5.JPG?f=xxxs')
+            .rightcontainer
+                .projectname(id='projecttitle')= project.name
+                .description
+                    p Description
+                    .descriptiontext= project.description
+                .details
+                    p Details
+                    dl.detailcontent
+                        dt Furniture Type
+                        dd= project.furnitureType
+                        dt Brand
+                        dd= project.brand
+                        dt Serial Number
+                        dd= project.serialNumber
+                .reviews
+                    p Reviews
+                    

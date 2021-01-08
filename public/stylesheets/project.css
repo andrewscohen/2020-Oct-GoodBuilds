@@ -1,10 +1,81 @@
-.leftSpan {
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 50px; 
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+.projectcontainer {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
 }
-.leftContainer {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(186, 177, 177, 0.66)
-    
+
+.projectgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    height: 100%;
+    margin-right: 10%;
 }
+
+img {
+    height: 65%;
+    grid-column: 1;
+    align-self: center;
+}
+
+.rightcontainer {
+    grid-column: 2;
+    display: block;
+    width: 100%;
+}
+
+.projectname {
+    padding-top: 40px;
+    font-size: 40px;
+
+}
+.description > p {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.details{
+
+}
+
+.descriptiontext {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+dt {
+    float: left;
+    width: 50%;
+    background-color: lightgray;
+}
+
+dl {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+
+dd, dt {
+    border: thin solid gray;
+}
+
+dd {
+    margin: 0;
+}
+
+
+p {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-size: 30px;
+    padding: 15px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#projecttitle {
+    font-family: 'Ubuntu', sans-serif;
+}
+
