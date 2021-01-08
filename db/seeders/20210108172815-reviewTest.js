@@ -14,4 +14,3 @@ module.exports = {
     return queryInterface.bulkDelete('Reviews', null, {});
   }
 };
-
