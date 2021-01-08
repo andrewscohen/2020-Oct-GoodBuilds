@@ -47,9 +47,10 @@ body {
   list-style: none;
   align-items: center;
 }
-.navbar_menu a {
+
+.navbar_menu a, .button-menu {
   text-decoration: none;
-  border: solid 3px black;
+  border: solid 1.5px black;
   padding: 15px;
   margin-right: 10px;
   margin-left: 15px;
@@ -57,7 +58,16 @@ body {
   border-radius: 6px;
   font-family: Arial;
   font-weight: bold;
-  background-color:rgba(255, 244, 244, 0.2)
+
+  background-color:rgba(255, 244, 244, 0.2);
+  font-size: small;
+
+}
+
+
+.button-menu:hover{
+  background-color:rgba(255, 255, 255, 0.4);
+  box-shadow: 4px 5px 10px 0px rgba(119, 104, 104, 0.753);
 }
 .navbar_menu li {
   height: fit-content;
