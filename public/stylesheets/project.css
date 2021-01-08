@@ -1,0 +1,10 @@
+.leftSpan {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 50px; 
+}
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(186, 177, 177, 0.66)
+    
+}
