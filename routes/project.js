@@ -73,7 +73,6 @@ router.get('/project/edit/:id(\\d+)', csrfProtection,
         const projectId = parseInt(req.params.id, 10);
         const project = await db.Project.findByPk(projectId);
         const reviews = await db.Review.findAll({ where: { projectId: projectId }, include: { model: db.User } })
-
         res.render('project-display', {
             title: 'Edit Project',
             project, reviews, projectId,

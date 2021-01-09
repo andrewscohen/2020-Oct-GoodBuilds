@@ -17,10 +17,13 @@
 
 img {
     height: 65%;
+    /* width: 95%; */
     grid-column: 1;
     align-self: center;
 }
-
+#furnitureimg {
+    width: 95%;
+}
 .rightcontainer {
     grid-column: 2;
     display: block;
