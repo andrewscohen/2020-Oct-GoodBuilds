@@ -17,7 +17,7 @@ body {
   background-image: url("/assets/1.svg");
   background-repeat: repeat;
   background-size: cover;
-  opacity: 0.6;
+  opacity: 0.5;
   height: 100vh;
   width: 100vw;
   z-index: -1;
@@ -25,12 +25,25 @@ body {
 
 .forms {
   position: fixed;
-  right: 50px;
-  bottom: 100px;
+  right: 40%;
+  left: 30%;
   display: flex;
-  align-items: flex-end;
-  height: 370px;
-  width: 380px;
+  align-items: center;
+  min-height: 20em;
+  width: 25em;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.forms_login {
+  position: relative;
+  left: 40%;
+  right: 40%;
+  bottom: 20%;
+  top: 20%;
+  display: flex;
+  align-items: center;
+  min-height: 330px;
+  width: 450px;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -43,10 +56,11 @@ body {
   margin-bottom: 5px;
   height: 27px;
   width: 150%;
+  padding-left: 7px;
 }
 
 .formHeader {
-  font-family: Bebas Neue;
+  font-family: Arial;
   font-size: 40px;
   position: absolute;
   top: 20px;
@@ -57,7 +71,7 @@ body {
 input::placeholder {
   font-family: Arial;
   font-size: medium;
-  padding-left: 6px;
+  /* padding-left: 6px; */
   color: rgb(113, 111, 111);
 }
 
@@ -77,7 +91,7 @@ input::placeholder {
   width: 80px;
   margin-top: 5px;
   margin-left: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   cursor: pointer;
   /* margin: 3px; */
 }
@@ -88,4 +102,17 @@ input::placeholder {
     rgb(14, 79, 14) 40%,
     rgb(49, 152, 49) 100%
   );
+}
+
+.account-btn {
+  font-family: Arial;
+  margin-left: 14px;
+  color: rgb(57, 56, 56);
+}
+
+.account-btn > a {
+  color: rgb(57, 56, 56);
+}
+.account-btn > a:hover {
+  color: rgb(14, 79, 14);
 }

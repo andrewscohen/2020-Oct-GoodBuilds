@@ -3,7 +3,7 @@ include utils.pug
 
 block content
   +validationErrorSummary(errors)
-  div(class='forms')
+  div(class='forms_login')
     h4(class='formHeader') Log In
     form(action='/users/login' method='post')
       input(type='hidden' name='_csrf' value=csrfToken)
@@ -11,5 +11,5 @@ block content
       +field('Password', 'password', null, 'password', 'Password')
       div
         button(type='submit' class='button') Login
-    div
-      p: a(href='/users/register') Don't have an account?
+      div(class='account-btn')
+        a(href='/users/register') New here? Create a free account!
