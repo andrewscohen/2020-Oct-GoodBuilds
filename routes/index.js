@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db/models')
 const { csrfProtection, asyncHandler } = require('./utils')
-const { check, validationResult } = require('express-validator')
+const { check, validationResult } = require('express-validator');
+
 
 /* GET home page. */
 router.get('/', csrfProtection, asyncHandler(async (req, res) => {
@@ -15,26 +16,17 @@ router.get('/', csrfProtection, asyncHandler(async (req, res) => {
 }));
 
 // const reviewValidators = [
-//   check('name')
+//   check('difficultyLevel')
 //       .exists({ checkFalsy: true })
-//       .withMessage('Please provide a value for Name')
+//       .withMessage('Please provide a level of difficulty to submit'),
+//   check('rating')
+//       .exists({ checkFalsy: true })
+//       .withMessage('Please provide a level of enjoyment to submit'),
+//   check('completionTime')
+//       .exists({ checkFalsy: true })
+//       .withMessage('How long did it take you to build your beautiful new furniture? (Required to submit)')
 //       .isLength({ max: 50 })
-//       .withMessage('Name must not be more than 50 characters long'),
-//   check('brand')
-//       .exists({ checkFalsy: true })
-//       .withMessage('Please provide a value for Brand')
-//       .isLength({ max: 50 })
-//       .withMessage('Brand must not be more than 50 characters long'),
-//   check('furnitureType')
-//       .exists({ checkFalsy: true })
-//       .withMessage('Please provide a value for Furniture Type')
-//       .isLength({ max: 50 })
-//       .withMessage('Furniture Type must not be more than 50 characters long'),
-//   check('serialNumber')
-//       .exists({ checkFalsy: true })
-//       .withMessage('Please provide a value for Serial Number')
-//       .isLength({ max: 100 })
-//       .withMessage('Serial Number must not be more than 100 characters long'),
+//       .withMessage('Completion time must not be more than 50 characters long'),
 // ];
 
 router.post(
@@ -47,8 +39,27 @@ router.post(
     rating = parseInt(rating);
     const review = await db.Review.create({ difficultyLevel, content, rating, completionTime, userId: req.session.auth.userId, projectId });
     console.log('Saved Review!')
-    res.redirect(`/project/edit/${projectId}`);
+    res.redirect(`/projects/${projectId}`);
   })
 );
+
+//attempting to implement  review validators
+// const review = db.Review.build(
+//   { difficultyLevel, content, rating, completionTime, userId: req.session.auth.userId, projectId }
+// );
+
+// const validatorErrors = validationResult(req);
+
+// if (validatorErrors.isEmpty()) {
+//   await review.save();
+//   res.redirect(`/projects/${projectId}`);
+// } else {
+//   const errors = validatorErrors.array().map((error) => error.msg);
+//   req.locals.errors = errors;
+//   res.redirect(`/projects/${projectId}`);
+//   next(errors);
+// }
+
+
 
 module.exports = router;

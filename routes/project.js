@@ -117,6 +117,7 @@ router.post('/projects', csrfProtection, projectValidators,
 
 router.get('/projects/:id(\\d+)', csrfProtection,
     asyncHandler(async (req, res) => {
+        // const { errors } = req.locals.errors;
         const projectId = parseInt(req.params.id, 10);
         const project = await db.Project.findByPk(projectId);
         const reviews = await db.Review.findAll({ where: { projectId: projectId }, include: { model: db.User } })
