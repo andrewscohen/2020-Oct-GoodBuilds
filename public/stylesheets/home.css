@@ -1,20 +1,64 @@
+.main_container {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.furniture_container {
+  --img-width: 12em;
+}
+
 .furniture_container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  width: fit-content;
-  /* grid-gap: 1em; */
+  grid-template-columns: repeat(auto-fill, minmax(var(--img-width), 1fr));
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* grid-template-rows: repeat(3, 1fr); */
+  /* width: fit-content; */
+  /* height: fit-content; */
+  grid-gap: 2em;
   justify-content: center;
 }
 
-/* .furniture_type_icon {
-  height: 20em;
-  width: 20em;
-} */
+.furniture_type_label {
+  justify-content: center;
+}
+
+.furniture_type_icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* margin: 3em; */
+}
 
 #furniture_logo {
-  height: 20em;
-  width: 20em;
-  border: 1px solid black;
+  height: var(--img-width);
+  width: var(--img-width);
+  /* border: 1px solid grey; */
+  /* padding: 3px; */
   /* border-radius: 50%; */
+}
+.furniture_type_icon > a > p {
+  color: black;
+}
+.furniture_type_icon > a:visited > p {
+  color: rgb(57, 56, 56);
+}
+/*
+#furniture_logo a {
+  filter: grayscale(1);
+  transition: all ease 0.6s;
+}
+#furniture_logo a:hover {
+  filter: grayscale(0);
+} */
+
+@media (min-width: 320px) {
+  .furniture_container {
+    --img-width: 10em;
+  }
+}
+@media (min-width: 720px) {
+  .furniture_container {
+    --img-width: 15em;
+  }
 }
