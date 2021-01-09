@@ -4,7 +4,7 @@ include utils.pug
 block content
     .projectcontainer
         .projectgrid
-            img(src='https://www.ikea.com/us/en/images/products/brimnes-tv-storage-combination-glass-doors-white__0619452_PE689095_S5.JPG?f=xxxs')
+            img(src=project.imgLink)
             .rightcontainer
                 .projectname(id='projecttitle')= project.name
                 .description
@@ -20,32 +20,32 @@ block content
                         dt Serial Number
                         dd= project.serialNumber
                 .reviews
-                    div 
-                        if locals.authenticated 
+                    div
+                        if locals.authenticated
                             .createReviewContainer
-                                h1 Leave a review: 
+                                h1 Leave a review:
                                 form(method='post' action='/review')
                                     .inputReviewContainer
                                         textarea(name="reviewInput", cols="30", rows="10")
                                     .difficultyLevelContainer
                                         label(for="difficultyLevel") Please choose a number between 1-10 for difficulty level.
-                                        input(type="number", name='difficultyLevel',min='0', max='10') 
+                                        input(type="number", name='difficultyLevel',min='0', max='10')
                                     .ratingContainer
-                                        label(for='rating') Please choose a number between 1-5 for your rating of enjoyment in building this project. 
+                                        label(for='rating') Please choose a number between 1-5 for your rating of enjoyment in building this project.
                                         input(type="number", name='difficultyLevel',min='0', max='5')
                                     .completionTimeContainer
                                         label(for='completionTime') Please specify the amount of time it took to complete this project.
                                         input(type='text', name='completionTime',placeholder='Amount of time')
                                         input(type='hidden',name='projectId',value=projectId)
                                         button.reviewbutton.button Submit
-                        else 
+                        else
                             .userNotLoggedInReview
                                 h1 To leave a review please create an account and log in.
                                     li: a(href='/users/login') Existing users log in.
                                     li: a(href='/users/register') Create an account.
-                                    
+
                     div
-                        .displayReviewContainer         
+                        .displayReviewContainer
                             h1 Reviews:
                             each review in reviews
                                 div User: #{review.User.userName}

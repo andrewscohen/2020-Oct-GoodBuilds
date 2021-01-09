@@ -5,7 +5,9 @@ module.exports = (sequelize, DataTypes) => {
     brand: DataTypes.STRING,
     furnitureType: DataTypes.STRING,
     serialNumber: DataTypes.STRING,
-    description: DataTypes.TEXT
+    description: DataTypes.TEXT,
+    imgLink: DataTypes.STRING,
+    productLink: DataTypes.STRING
   }, {});
   Project.associate = function (models) {
     const projectUserMap = {
