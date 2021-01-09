@@ -1,49 +1,66 @@
 extends layout.pug
 block content
-    h1 FURNITURE
-    //- these can either all be different get routes or the same route with
-    //- different where clause based on the link they click.
-    //- potentially make the psuedo forms where fields are hidden
+    div(class='main_container')
+        //- these can either all be different get routes or the same route with
+        //- different where clause based on the link they click.
+        //- potentially make the psuedo forms where fields are hidden
 
-    //-  I realized that the answer to the question to make the route for
-    //- those buttons/links a GET route to something like /projects/furniture-type/:furnitureType
-    //- and the links for each would be href='/projects/furniture-type/couches', then in the route you pull
-    //- out couches using `req.params.furnitureType` and query your database by querying the projects table
-    //- where furnitureType === req.params.furnitureType
-    div(class='furniture_container')
-        div(class='furniture_type_icon')
-            a(href='/furniture-type/sofa'): img(src="https://target.scene7.com/is/image/Target/GUEST_004748f2-60c7-4f30-ab7c-d4e2a402ba8c?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
-            p: a(href='/furniture-type/sofa') Sofas & Sectionals
-        div(class='furniture_type_icon')
-            a(href='/furniture-type/loungeChair'): img(src="https://target.scene7.com/is/image/Target/GUEST_38be65f8-ca90-4eb1-870f-0ad377de15d7?wid=325&hei=325&qlt=80&fmt=webp" id='furniture_logo')
-            p: a(href='/furniture-type/loungeChair') Armchairs & Chaises
-        div(class='furniture_type_icon')
-            a(href='/furniture-type/officeChair'): img(src="https://www.ikea.com/us/en/images/products/markus-office-chair-vissle-dark-gray__0399810_PE563882_S5.JPG?f=xxxl" id='furniture_logo')
-            p: a(href='/furniture-type/officeChairs') Office Chairs
-        div(class='furniture_type_icon')
-            a(href='/furniture-type/table'): img(src="https://target.scene7.com/is/image/Target/GUEST_e11a51d2-91cd-45f0-b8f3-b5a6a119f267?wid=700&hei=700&qlt=80&fmt=webp" id='furniture_logo')
-            p: a(href='/furniture-type/table') Tables & Desks
-        div(class='furniture_type_icon')
-            a(href='/furniture-type/diningChair'): img(src="https://target.scene7.com/is/image/Target/GUEST_049852dd-62d4-46c1-8d24-f1a292b446e8?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
-            p: a(href='/furniture-type/diningChair') Dining Chairs & Bar Stools
-        div(class='furniture_type_icon')
-            a(href='/furniture-type/bed'): img(src="https://target.scene7.com/is/image/Target/GUEST_e87e7415-3b6b-4202-9088-01e9a0059436?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
-            p: a(href='/furniture-type/bed') Bed Frames & Headboards
-        div(class='furniture_type_icon')
-            a(href='/furniture-type/wardrobeCloset'): img(src="https://target.scene7.com/is/image/Target/GUEST_75b29740-ab4e-40b0-8b90-6e299ecc71ea?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
-            p: a(href='/furniture-type/wardrobeCloset') Wardrobes & Closets
-        div(class='furniture_type_icon')
-            a(href='/furniture-type/dresser'): img(src="https://target.scene7.com/is/image/Target/GUEST_0f4013b3-d203-4ad6-9576-cdb7bc8b50fe?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
-            p: a(href='/furniture-type/dresser') Dressers
-        div(class='furniture_type_icon')
-            a(href='/furniture-type/mediaFurniture'): img(src="https://target.scene7.com/is/image/Target/GUEST_2c19c43d-5ffa-41f1-969e-0d0209e68ae7?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
-            p: a(href='/furniture-type/mediaFurniture') Bookshelves & Media Furniture
-        div(class='furniture_type_icon')
-            a(href='/furniture-type/kitchenSurface'): img(src="https://target.scene7.com/is/image/Target/GUEST_ff1bdb15-3bc0-43a9-9a48-92cb7eae0a3f?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
-            p: a(href='/furniture-type/kitchenSurface') Kitchen Islands & Carts
-        div(class='furniture_type_icon')
-            a(href='/furniture-type/outdoorFurniture'): img(src="https://target.scene7.com/is/image/Target/GUEST_6e64db11-e4c6-40c1-8463-6a215b0aec74?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
-            p: a(href='/furniture-type/outdoorFurniture') Outdoor Furniture
-        div(class='furniture_type_icon')
-            a(href='/furniture-type/nursery'): img(src="https://target.scene7.com/is/image/Target/GUEST_32cce8d5-1dab-4d8d-b237-4b928dad63c9?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
-            p: a(href='/furniture-type/nursery') Nursery
+        //-  I realized that the answer to the question to make the route for
+        //- those buttons/links a GET route to something like /projects/furniture-type/:furnitureType
+        //- and the links for each would be href='/projects/furniture-type/couches', then in the route you pull
+        //- out couches using `req.params.furnitureType` and query your database by querying the projects table
+        //- where furnitureType === req.params.furnitureType
+        div(class='furniture_container')
+            div(class='furniture_type_icon')
+                a(href='/furniture-type/new' style='text-decoration: none')
+                    img(src="https://target.scene7.com/is/image/Target/GUEST_004748f2-60c7-4f30-ab7c-d4e2a402ba8c?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
+                    p banna
+        div(class='furniture_container')
+            div(class='furniture_type_icon')
+                a(href='/furniture-type/sofa' style='text-decoration: none')
+                    img(src="https://target.scene7.com/is/image/Target/GUEST_004748f2-60c7-4f30-ab7c-d4e2a402ba8c?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
+                    p Sofas & Sectionals
+            div(class='furniture_type_icon')
+                a(href='/furniture-type/loungeChair')
+                    img(src="https://target.scene7.com/is/image/Target/GUEST_38be65f8-ca90-4eb1-870f-0ad377de15d7?wid=325&hei=325&qlt=80&fmt=webp" id='furniture_logo')
+                    p Armchairs & Chaises
+            div(class='furniture_type_icon')
+                a(href='/furniture-type/officeChair')
+                    img(src="https://www.ikea.com/us/en/images/products/markus-office-chair-vissle-dark-gray__0399810_PE563882_S5.JPG?f=xxxl" id='furniture_logo')
+                    p Office Chairs
+            div(class='furniture_type_icon')
+                a(href='/furniture-type/table')
+                    img(src="https://target.scene7.com/is/image/Target/GUEST_e11a51d2-91cd-45f0-b8f3-b5a6a119f267?wid=700&hei=700&qlt=80&fmt=webp" id='furniture_logo')
+                    p Tables & Desks
+            div(class='furniture_type_icon')
+                a(href='/furniture-type/diningChair')
+                    img(src="https://target.scene7.com/is/image/Target/GUEST_049852dd-62d4-46c1-8d24-f1a292b446e8?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
+                    p Dining Chairs & Bar Stools
+            div(class='furniture_type_icon')
+                a(href='/furniture-type/bed')
+                    img(src="https://target.scene7.com/is/image/Target/GUEST_e87e7415-3b6b-4202-9088-01e9a0059436?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
+                    p Bed Frames & Headboards
+            div(class='furniture_type_icon')
+                a(href='/furniture-type/wardrobeCloset')
+                    img(src="https://target.scene7.com/is/image/Target/GUEST_75b29740-ab4e-40b0-8b90-6e299ecc71ea?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
+                    p Wardrobes & Closets
+            div(class='furniture_type_icon')
+                a(href='/furniture-type/dresser')
+                    img(src="https://target.scene7.com/is/image/Target/GUEST_0f4013b3-d203-4ad6-9576-cdb7bc8b50fe?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
+                    p Dressers
+            div(class='furniture_type_icon')
+                a(href='/furniture-type/mediaFurniture')
+                    img(src="https://target.scene7.com/is/image/Target/GUEST_2c19c43d-5ffa-41f1-969e-0d0209e68ae7?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
+                    p Bookshelves & Media Furniture
+            div(class='furniture_type_icon')
+                a(href='/furniture-type/kitchenSurface')
+                    img(src="https://target.scene7.com/is/image/Target/GUEST_ff1bdb15-3bc0-43a9-9a48-92cb7eae0a3f?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
+                    p Kitchen Islands & Carts
+            div(class='furniture_type_icon')
+                a(href='/furniture-type/outdoorFurniture')
+                    img(src="https://target.scene7.com/is/image/Target/GUEST_6e64db11-e4c6-40c1-8463-6a215b0aec74?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
+                    p Outdoor Furniture
+            div(class='furniture_type_icon')
+                a(href='/furniture-type/nursery')
+                    img(src="https://target.scene7.com/is/image/Target/GUEST_32cce8d5-1dab-4d8d-b237-4b928dad63c9?fmt=webp&wid=1400&qlt=80" id='furniture_logo')
+                    p Nursery
