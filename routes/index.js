@@ -5,14 +5,14 @@ const { csrfProtection, asyncHandler } = require('./utils')
 
 
 /* GET home page. */
-router.get('/', csrfProtection, (req, res) => {
-  const user = db.User.build()
+router.get('/', csrfProtection, asyncHandler(async (req, res) => {
+  const user = await db.User.build()
   res.render('home-page', {
     title: 'Home',
     user,
     csrfToken: req.csrfToken(),
   });
-});
+}));
 
 router.post(
   "/reviews",
