@@ -1,0 +1,39 @@
+.furniture-filter-display-container {
+    margin: 3em;
+}
+
+.furniture-display {
+    --img-width: 20em;
+}
+
+.furniture-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--img-width), 1fr));
+    grid-gap: 2em;
+    justify-content: center;
+}
+
+.furniture-img {
+    height: var(--img-width);
+    width: var(--img-width);
+}
+
+.furniture-img > a > p {
+    color: black;
+
+  }
+  .furniture-img > a:visited > p {
+    color: rgb(57, 56, 56);
+  }
+
+
+  @media (min-width: 320px) {
+    .furniture-display {
+      --img-width: 10em;
+    }
+  }
+  @media (min-width: 720px) {
+    .furniture-display {
+      --img-width: 20em;
+    }
+  }
