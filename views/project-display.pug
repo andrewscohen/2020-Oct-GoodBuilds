@@ -4,7 +4,7 @@ include utils.pug
 block content
     .projectcontainer
         .projectgrid
-            img(src=project.imgLink)
+            img(src=project.imgLink id='furnitureimg')
             .rightcontainer
                 .projectname(id='projecttitle')= project.name
                 .description
@@ -24,15 +24,15 @@ block content
                         if locals.authenticated
                             .createReviewContainer
                                 h1 Leave a review:
-                                form(method='post' action='/review')
+                                form(method='post' action='/reviews')
                                     .inputReviewContainer
-                                        textarea(name="reviewInput", cols="30", rows="10")
+                                        textarea(name="content", cols="30", rows="10")
                                     .difficultyLevelContainer
                                         label(for="difficultyLevel") Please choose a number between 1-10 for difficulty level.
                                         input(type="number", name='difficultyLevel',min='0', max='10')
                                     .ratingContainer
                                         label(for='rating') Please choose a number between 1-5 for your rating of enjoyment in building this project.
-                                        input(type="number", name='difficultyLevel',min='0', max='5')
+                                        input(type="number", name='rating',min='0', max='5')
                                     .completionTimeContainer
                                         label(for='completionTime') Please specify the amount of time it took to complete this project.
                                         input(type='text', name='completionTime',placeholder='Amount of time')

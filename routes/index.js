@@ -41,8 +41,11 @@ router.post(
   "/reviews",
   asyncHandler(async (req, res) => {
     // console.log(req.session.user.id)
-    const { difficultyLevel, content, rating, completionTime, projectId } = req.body;
-    const review = await db.Review.create({ difficultyLevel, content, rating, completionTime, userId: req.session.user.id, projectId });
+    let { difficultyLevel, content, rating, completionTime, projectId } = req.body;
+    difficultyLevel = parseInt(difficultyLevel);
+    console.log(req.body);
+    rating = parseInt(rating);
+    const review = await db.Review.create({ difficultyLevel, content, rating, completionTime, userId: req.session.auth.userId, projectId });
     console.log('Saved Review!')
     res.redirect(`/project/edit/${projectId}`);
   })
