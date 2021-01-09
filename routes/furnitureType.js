@@ -12,7 +12,6 @@ router.get('/:furnitureType', asyncHandler (async (req, res) => {
         where:
             { furnitureType}
         });
-    console.log(furnitureTypes[0]);
     res.render('furniture-display', { title: furnitureType, furnitureTypes });
 }));
 
