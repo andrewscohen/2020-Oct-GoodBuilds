@@ -68,14 +68,62 @@ router.post('/projects', csrfProtection, projectValidators,
         }
     }));
 
+    const furnitureTypeRename = (furnitureObj) => {
+        let renamedFurniture;
+        switch (furnitureObj) {
+            case 'sofa':
+                renamedFurniture = 'Sofa';
+                break;
+            case 'officeChair':
+                renamedFurniture = 'Office Chair';
+                break;
+            case 'loungeChair':
+                renamedFurniture = 'Lounge Chair';
+                break;
+            case 'table':
+                renamedFurniture = 'Table';
+                break;
+            case 'diningChair':
+                renamedFurniture = 'Dining Chair';
+                break;
+            case 'bed':
+                renamedFurniture = 'Bed';
+                break;
+            case 'wardrobeCloset':
+                renamedFurniture = 'Wardrobe or Closet';
+                break;
+            case 'mediaFurniture':
+                renamedFurniture = 'Media Furniture';
+                break;
+            case 'kitchenSurface':
+                renamedFurniture = 'Kitchen Island';
+                break;
+            case 'outdoorFurniture':
+                renamedFurniture = 'Outdoor Furniture';
+                break;
+            case 'nursery':
+                renamedFurniture = 'Nursery';
+                break;
+            case 'desk':
+                renamedFurniture = 'Desk';
+                break;
+            case 'dresser':
+                renamedFurniture = 'Dresser';
+                break;
+        }
+
+        return renamedFurniture;
+    }
+
 router.get('/projects/:id(\\d+)', csrfProtection,
     asyncHandler(async (req, res) => {
         const projectId = parseInt(req.params.id, 10);
         const project = await db.Project.findByPk(projectId);
         const reviews = await db.Review.findAll({ where: { projectId: projectId }, include: { model: db.User } })
+        let furnitureTypeText = furnitureTypeRename(project.furnitureType);
         res.render('project-display', {
             title: 'Edit Project',
-            project, reviews, projectId,
+            project, reviews, projectId, furnitureTypeText,
             csrfToken: req.csrfToken(),
         });
     }));
