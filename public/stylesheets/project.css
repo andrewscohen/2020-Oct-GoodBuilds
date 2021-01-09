@@ -63,6 +63,7 @@ dl {
 
 dd, dt {
     border: thin solid gray;
+    padding: 10px;
 }
 
 dd {
@@ -88,7 +89,7 @@ dd {
 .reviews{
     border: solid 1px black;
     padding-top: 15px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 .createReviewContainer {
 
@@ -110,4 +111,9 @@ font-size: larger;
 
 .createReviewContainer h1{
     margin-left: 10px
+}
+
+.reviews h1, .reviews a {
+    font-size: 20px;
+    font-weight: 500;
 }
