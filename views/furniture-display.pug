@@ -4,6 +4,7 @@ block content
 
     div(class='furniture-display')
         each furniture in furnitureTypes
-            div= furniture.name
-            div(class='furniture-image')
-                img(src= furniture.imgLink )
+            a(href=`/projects/${furniture.id}`)
+                div= furniture.name
+                div(class='furniture-image')
+                    img(src= furniture.imgLink )

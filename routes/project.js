@@ -68,7 +68,7 @@ router.post('/projects', csrfProtection, projectValidators,
         }
     }));
 
-router.get('/project/edit/:id(\\d+)', csrfProtection,
+router.get('/projects/:id(\\d+)', csrfProtection,
     asyncHandler(async (req, res) => {
         const projectId = parseInt(req.params.id, 10);
         const project = await db.Project.findByPk(projectId);
