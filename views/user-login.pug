@@ -3,13 +3,14 @@ include utils.pug
 
 block content
   +validationErrorSummary(errors)
-  div(class='forms_login')
-    h4(class='formHeader') Log In
-    form(action='/users/login' method='post')
-      input(type='hidden' name='_csrf' value=csrfToken)
-      +field('Email Address', 'email', email, 'email', 'Email Address')
-      +field('Password', 'password', null, 'password', 'Password')
-      div
-        button(type='submit' class='button') Login
-      div(class='account-btn')
-        a(href='/users/register') New here? Create a free account!
+  div(class='login-container')
+    div(class='login_box')
+      div(class='login_head') Log In
+      form(action='/users/login' method='post')
+        input(type='hidden' name='_csrf' value=csrfToken)
+        +field('Email Address', 'email', email, 'email', 'Email Address')
+        +field('Password', 'password', null, 'password', 'Password')
+        div
+          button(type='submit' class='button') Login
+        div(class='account-btn')
+          a(href='/users/register') New here? Create a free account!
