@@ -11,14 +11,17 @@ body {
   align-content: center;
   width: 100%;
   height: 115px;
-  border-bottom: solid 2px rgba(141, 127, 127, 0.4);
-  background-color: rgba(141, 127, 127, 0.4);
+  /* border-bottom: solid 2px rgba(141, 127, 127, 0.4);
+  background-color: rgba(141, 127, 127, 0.4); */
   font-family: Arial;
+  position: sticky;
+  overflow: hidden;
 }
 #navbar_logo {
   height: 100%;
   width: auto;
   font-family: Arial;
+  padding-left: 2em;
 }
 #login_search {
   height: 45px;
