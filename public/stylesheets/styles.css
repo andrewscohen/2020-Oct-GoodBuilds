@@ -9,7 +9,7 @@ body {
 
 .background-img {
   position: fixed;
-  background-image: url("/assets/1.svg");
+  /* background-image: url("/assets/1.svg"); */
   background-repeat: repeat;
   background-size: cover;
   opacity: 0.5;
