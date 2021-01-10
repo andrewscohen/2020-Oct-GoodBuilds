@@ -14,8 +14,8 @@ body {
   /* border-bottom: solid 2px rgba(141, 127, 127, 0.4);
   background-color: rgba(141, 127, 127, 0.4); */
   font-family: Arial;
-  position: sticky;
-  overflow: hidden;
+  /* position: sticky;
+  overflow: hidden; */
 }
 #navbar_logo {
   height: 100%;
