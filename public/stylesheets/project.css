@@ -1,134 +1,130 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 .projectcontainer {
-    /* height: 100%; */
-    /* background-color: rgba(255, 255, 255, 0.9); */
+	/* height: 100%; */
+	/* background-color: rgba(255, 255, 255, 0.9); */
 }
 
 .projectgrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    height: 100%;
-    margin-right: 10%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	height: 100%;
+	margin-right: 10%;
 }
 
 img {
-    height: 65%;
-    /* width: 95%; */
-    grid-column: 1;
-    align-self: center;
+	height: 65%;
+	/* width: 95%; */
+	grid-column: 1;
+	align-self: center;
 }
 #furnitureimg {
-    width: 95%;
+	width: 95%;
 }
 .rightcontainer {
-    grid-column: 2;
-    display: block;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    margin-top: 15px;
+	grid-column: 2;
+	display: block;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding: 10px;
+	margin-top: 15px;
 }
 
 .projectname {
-    padding-top: 40px;
-    font-size: 40px;
-
+	padding-top: 40px;
+	font-size: 40px;
 }
 .description > p {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
-.details{
-
+.details {
 }
 
 .descriptiontext {
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
 }
 
 dt {
-    float: left;
-    width: 50%;
-    background-color: lightgray;
+	float: left;
+	width: 50%;
+	background-color: lightgray;
 }
 
 dl {
-    font-size: 30px;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
+	font-size: 30px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
 }
 
-
-dd, dt {
-    border: thin solid gray;
-    padding: 10px;
+dd,
+dt {
+	border: thin solid gray;
+	padding: 10px;
 }
 
 dd {
-    margin: 0;
+	margin: 0;
 }
 
-
- .rightcontainer p {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    font-size: 30px;
-    padding: 15px;
-    font-family: 'Ubuntu', sans-serif;
+.rightcontainer p {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	font-size: 30px;
+	padding: 15px;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 #projecttitle {
-    font-family: 'Ubuntu', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 .difficultyLevelContainer {
-    display: block;
+	display: block;
 }
-.reviews{
-    border: solid 1px black;
-    padding-top: 15px;
-    font-family: 'Roboto', sans-serif;
+.reviews {
+	border: solid 1px black;
+	padding-top: 15px;
+	font-family: 'Roboto', sans-serif;
 }
 .createReviewContainer {
-
-
 }
-.inputReviewContainer textarea{
-    width: 99%;
-    /* right: 20px; */
-    align-self: center;
+.inputReviewContainer textarea {
+	width: 99%;
+	/* right: 20px; */
+	align-self: center;
 }
-.difficultyLevelContainer, .ratingContainer,.completionTimeContainer{
-padding: 15px;
-font-size: larger;
-}
-
-.createReviewContainer label{
-    margin-right: 30px;
+.difficultyLevelContainer,
+.ratingContainer,
+.completionTimeContainer {
+	padding: 15px;
+	font-size: larger;
 }
 
-.createReviewContainer h1{
-    margin-left: 10px
+.createReviewContainer label {
+	margin-right: 30px;
 }
 
-.reviews h1, .reviews a {
-    font-size: 20px;
-    font-weight: 500;
+.createReviewContainer h1 {
+	margin-left: 10px;
+}
+
+.reviews h1,
+.reviews a {
+	font-size: 20px;
+	font-weight: 500;
 }
 
 .reviews a {
-    text-underline-offset: 2px;
-    text-decoration-thickness: 0.5px;
-    color: rgb(27, 71, 27)
+	text-underline-offset: 2px;
+	text-decoration-thickness: 0.5px;
+	color: rgb(27, 71, 27);
 }
 
 .reviews li {
-    list-style-type: none;
-    padding-left: 20px;
+	list-style-type: none;
+	padding-left: 20px;
 }
-
