@@ -3,85 +3,76 @@ block content
     div(class='main_container')
         div(class='header-container')
             img(src='https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80' class="home-image")
-        //- these can either all be different get routes or the same route with
-        //- different where clause based on the link they click.
-        //- potentially make the psuedo forms where fields are hidden
-
-        //-  I realized that the answer to the question to make the route for
-        //- those buttons/links a GET route to something like /projects/furniture-type/:furnitureType
-        //- and the links for each would be href='/projects/furniture-type/couches', then in the route you pull
-        //- out couches using `req.params.furnitureType` and query your database by querying the projects table
-        //- where furnitureType === req.params.furnitureType
         div(class='furniture_container')
             div(class='furniture_type_icon')
                 a(href='/furniture-type/sofa' style='text-decoration: none')
                     img(src="https://images.crateandbarrel.com/is/image/Crate/F20_101_A_54_Hor_002/$web_pdp_main_carousel_med$/210110072931/F20_101_A_54_Hor_002.jpg" id='furniture_logo')
                     p sofas & sectionals
-                        div(class='middle')
-                            i(class="fas fa-arrow-circle-right")
+                        i(class="fas fa-arrow-circle-right")
+                    div(class='middle')
             div(class='furniture_type_icon')
                 a(href='/furniture-type/loungeChair' style='text-decoration: none')
                     img(src="https://assets.weimgs.com/weimgs/rk/images/wcm/products/202046/0010/finley-lounge-chair-1-o.jpg" id='furniture_logo')
                     p armchairs & chaises
-                    div(class='middle')
                         i(class="fas fa-arrow-circle-right")
+                    div(class='middle')
             div(class='furniture_type_icon')
                 a(href='/furniture-type/bed' style='text-decoration: none')
                     img(src="https://assets.weimgs.com/weimgs/rk/images/wcm/products/202040/0002/mod-upholstered-platform-bed-o.jpg" id='furniture_logo')
                     p bed frames & headboards
-                    div(class='middle')
                         i(class="fas fa-arrow-circle-right")
+                    div(class='middle')
             div(class='furniture_type_icon')
                 a(href='/furniture-type/wardrobeCloset' style='text-decoration: none')
                     img(src="https://assets.weimgs.com/weimgs/rk/images/wcm/products/202040/0046/bamboo-soft-closet-organization-essentials-o.jpg" id='furniture_logo')
                     p wardrobes & closets
-                    div(class='middle')
                         i(class="fas fa-arrow-circle-right")
+                    div(class='middle')
             div(class='furniture_type_icon')
                 a(href='/furniture-type/diningChair' style='text-decoration: none')
                     img(src="https://assets.weimgs.com/weimgs/rk/images/wcm/products/202037/0011/uma-faux-leather-dining-chair-set-of-2-o.jpg" id='furniture_logo')
                     p dining chairs & bar stools
-                    div(class='middle')
                         i(class="fas fa-arrow-circle-right")
+                    div(class='middle')
             div(class='furniture_type_icon')
                 a(href='/furniture-type/table' style='text-decoration: none')
                     img(src="https://assets.weimgs.com/weimgs/rk/images/wcm/products/202040/0003/anderson-solid-wood-dining-table-carob-o.jpg" id='furniture_logo')
                     p tables & desks
-                    div(class='middle')
                         i(class="fas fa-arrow-circle-right")
+                    div(class='middle')
             div(class='furniture_type_icon')
                 a(href='/furniture-type/outdoorFurniture' style='text-decoration: none')
                     img(src="https://images.crateandbarrel.com/is/image/Crate/CaymanOutdoorLoungeCollectionAC18/$web_pdp_main_carousel_med$/210110100148/CaymanOutdoorLoungeCollectionAC18.jpg" id='furniture_logo')
                     p outdoor furniture
-                    div(class='middle')
                         i(class="fas fa-arrow-circle-right")
+                    div(class='middle')
             div(class='furniture_type_icon')
                 a(href='/furniture-type/kitchenSurface' style='text-decoration: none')
                     img(src="https://assets.weimgs.com/weimgs/rk/images/wcm/products/202038/0185/frame-kitchen-console-marble-1-o.jpg" id='furniture_logo')
                     p kitchen islands & carts
-                    div(class='middle')
                         i(class="fas fa-arrow-circle-right")
+                    div(class='middle')
             div(class='furniture_type_icon')
                 a(href='/furniture-type/dresser' style='text-decoration: none')
                     img(src="https://assets.weimgs.com/weimgs/rk/images/wcm/products/202040/0102/alexa-reclaimed-wood-7-drawer-dresser-honey-o.jpg" id='furniture_logo')
                     p dressers
-                    div(class='middle')
                         i(class="fas fa-arrow-circle-right")
+                    div(class='middle')
             div(class='furniture_type_icon')
                 a(href='/furniture-type/nursery' style='text-decoration: none')
                     img(src="https://assets.weimgs.com/weimgs/rk/images/wcm/products/202028/0031/modern-4-in-1-convertible-crib-o.jpg" id='furniture_logo')
                     p nursery
-                    div(class='middle')
                         i(class="fas fa-arrow-circle-right")
+                    div(class='middle')
             div(class='furniture_type_icon')
                 a(href='/furniture-type/mediaFurniture' style='text-decoration: none')
                     img(src="https://assets.weimgs.com/weimgs/rk/images/wcm/products/202036/0015/mid-century-22-bookshelf-acorn-o.jpg" id='furniture_logo')
                     p bookshelves & media furniture
-                    div(class='middle')
                         i(class="fas fa-arrow-circle-right")
+                    div(class='middle')
             div(class='furniture_type_icon')
                 a(href='/furniture-type/officeChair' style='text-decoration: none')
                     img(src="https://images.unsplash.com/photo-1596162955779-9c8faa3d4e3c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=803&q=80" id='furniture_logo')
                     p office chairs
-                div(class='middle')
-                    i(class="fas fa-arrow-circle-right")
+                        i(class="fas fa-arrow-circle-right")
+                    div(class='middle')

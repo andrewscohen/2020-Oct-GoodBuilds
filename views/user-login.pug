@@ -12,10 +12,9 @@ block content
         +field('Email Address', 'email', email, 'email', 'Email Address')
         +field('Password', 'password', null, 'password', 'Password')
         div(class='button-container')
-          div
             button(type='submit' class='button') Login
-          div
-            form(action="/users/demo" method="post")
-              button(type='submit' class='button') Demo
-        div(class='account-btn')
-          a(href='/users/register') New here? Create a free account!
+      div(class='button-container')
+          form(action="/users/demo" method="post")
+            button(type='submit' class='button') Demo
+      div(class='account-btn')
+        a(href='/users/register') New here? Create a free account!

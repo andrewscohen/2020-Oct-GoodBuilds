@@ -7,17 +7,6 @@ body {
   height: 100%;
 }
 
-.background-img {
-  position: fixed;
-  background-image: url("/assets/4.svg");
-  /* background-repeat: repeat; */
-  background-size: cover;
-  /* opacity: 0.5; */
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
-}
-
 .button {
   font-family: Arial;
   color: lightgrey;
@@ -40,8 +29,8 @@ body {
 
 .button-container {
   display: flex;
+  justify-content: center;
 }
-
 .button:hover {
   background: linear-gradient(
     to bottom,
