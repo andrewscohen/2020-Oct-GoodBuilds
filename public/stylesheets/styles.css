@@ -1,91 +1,94 @@
 html {
-	height: 100%;
+  height: 100%;
 }
 body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-}
-
-.background-img {
-	position: fixed;
-	/* background-image: url("/assets/1.svg"); */
-	background-repeat: repeat;
-	background-size: cover;
-	opacity: 0.5;
-	height: 100vh;
-	width: 100vw;
-	z-index: -1;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .button {
-	font-family: Arial;
-	color: lightgrey;
-	font-size: medium;
-	background: linear-gradient(to bottom, rgb(49, 152, 49), 5%, rgb(14, 79, 14) 100%);
-	border-radius: 6px;
-	border: none;
-	height: 30px;
-	width: 70px;
-	cursor: pointer;
-	margin-top: 3px;
-	padding: 3px;
+  font-family: Arial;
+  color: lightgrey;
+  font-size: medium;
+  background: linear-gradient(
+    to bottom,
+    rgb(49, 152, 49),
+    5%,
+    rgb(14, 79, 14) 100%
+  );
+  border-radius: 6px;
+  border: none;
+  height: 36px;
+  width: 90px;
+  cursor: pointer;
+  /* margin-top: 3px; */
+  padding: 3px;
+  margin: 3px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+}
 .button:hover {
-	background: linear-gradient(to bottom, rgb(14, 79, 14) 40%, rgb(49, 152, 49) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgb(14, 79, 14) 40%,
+    rgb(49, 152, 49) 100%
+  );
 }
 
 .inputs {
-	border-style: solid;
-	border-width: 1px;
-	border-color: rgba(144, 144, 148, 0.5);
-	border-radius: 5px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	height: 27px;
-	width: 90%;
-	padding-left: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(144, 144, 148, 0.5);
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 27px;
+  width: 95%;
+  padding-left: 8px;
 }
 
 input::-webkit-input-placeholder {
-	font-family: Arial;
-	font-size: medium;
-	color: rgb(113, 111, 111);
+  font-family: Arial;
+  font-size: medium;
+  color: rgb(113, 111, 111);
 }
 
 input::-moz-placeholder {
-	font-family: Arial;
-	font-size: medium;
-	color: rgb(113, 111, 111);
+  font-family: Arial;
+  font-size: medium;
+  color: rgb(113, 111, 111);
 }
 
 input:-ms-input-placeholder {
-	font-family: Arial;
-	font-size: medium;
-	color: rgb(113, 111, 111);
+  font-family: Arial;
+  font-size: medium;
+  color: rgb(113, 111, 111);
 }
 
 input::-ms-input-placeholder {
-	font-family: Arial;
-	font-size: medium;
-	color: rgb(113, 111, 111);
+  font-family: Arial;
+  font-size: medium;
+  color: rgb(113, 111, 111);
 }
 
 input::placeholder {
-	font-family: Arial;
-	font-size: medium;
-	color: rgb(113, 111, 111);
+  font-family: Arial;
+  font-size: medium;
+  color: rgb(113, 111, 111);
 }
 
 .account-btn {
-	font-family: Arial;
-	padding: 5px;
-	color: rgb(57, 56, 56);
+  font-family: Arial;
+  padding: 5px;
+  color: rgb(57, 56, 56);
 }
 .account-btn > a {
-	color: rgb(57, 56, 56);
+  color: rgb(57, 56, 56);
 }
 .account-btn > a:hover {
-	color: rgb(14, 79, 14);
+  color: rgb(14, 79, 14);
 }

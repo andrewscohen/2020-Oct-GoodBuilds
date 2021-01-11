@@ -13,7 +13,6 @@ html
         link(rel='stylesheet' href='/stylesheets/register.css' type='text/css')
   body
     if locals.authenticated
-      div(class='background-img')
       nav(class='navbar_login')
         span
           a(href='/'): img(src='/assets/cbRecLogo.svg' id='navbar_logo')
@@ -32,7 +31,6 @@ html
               form(action='/users/logout' method='post')
                 div(class='navbar_button'): button(type='submit' class='button-menu') &#128736 Log Out
     else
-      div(class='background-img')
       nav(class='navbar_login')
         span
           a(href='/'): img(src="/assets/cbRecLogo.svg" id='navbar_logo')
@@ -42,6 +40,7 @@ html
           //-   img(src='/assets/loupe.svg' id='icon_img')
           span(class='navbar_menu')
             div(class='navbar_button'): a(href="/users/login" type='button')
+    
               //- img(src='/assets/userLogo.svg' id='navbar_login--icon')
               label(id='navbar_login--icontext') &#128736 Log In
             div(class='navbar_button'): a(href="/users/register" type='button')

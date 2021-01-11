@@ -3,6 +3,7 @@ include utils.pug
 
 block content
   +validationErrorSummary(errors)
+  div(class='background-img')
   div(class='login-container')
     div(class='login_box')
       div(class='login_head') Log In
@@ -10,7 +11,10 @@ block content
         input(type='hidden' name='_csrf' value=csrfToken)
         +field('Email Address', 'email', email, 'email', 'Email Address')
         +field('Password', 'password', null, 'password', 'Password')
-        div
-          button(type='submit' class='button') Login
-        div(class='account-btn')
-          a(href='/users/register') New here? Create a free account!
+        div(class='button-container')
+            button(type='submit' class='button') Login
+      div(class='button-container')
+          form(action="/users/demo" method="post")
+            button(type='submit' class='button') Demo
+      div(class='account-btn')
+        a(href='/users/register') New here? Create a free account!
