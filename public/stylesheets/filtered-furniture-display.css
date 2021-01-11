@@ -1,82 +1,71 @@
 .furniture-filter-display-container {
-	margin: 3em;
+  margin: 3em;
 }
 
 .furniture-display {
-	--img-width: 20em;
+  --img-width: 20em;
 }
 
 .furniture-display {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(var(--img-width), 1fr));
-	grid-gap: 2em;
-	justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--img-width), 1fr));
+  grid-gap: 2em;
+  justify-content: center;
 }
 
 .img-container {
-	height: var(--img-width);
-	width: var(--img-width);
-	position: relative;
+  height: var(--img-width);
+  width: var(--img-width);
+  position: relative;
 }
 
 .img-container {
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .image {
-	height: var(--img-width);
-	width: var(--img-width);
-	opacity: 1;
-	display: block;
-	width: 100%;
-	height: auto;
-	transition: .5s ease;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	border-radius: 10px;
-}
-
-.middle {
-	transition: .5s ease;
-	opacity: 0;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	text-align: center;
+  height: var(--img-width);
+  width: var(--img-width);
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
 }
 
 .img-container:hover .image {
-	opacity: 0.3;
+  opacity: 0.3;
 }
 
 .img-container:hover .middle {
-	opacity: 1;
+  opacity: 1;
 }
 
 .text {
-	background-color: #4caf50;
-	color: white;
-	font-size: 16px;
-	padding: 16px 32px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
 }
 
 .img-container > a > p {
-	color: black;
+  color: black;
 }
 .img-container > a:visited > p {
-	color: rgb(57, 56, 56);
-	justify-content: center;
+  color: rgb(57, 56, 56);
+  justify-content: center;
 }
 
 @media (min-width: 320px) {
-	.furniture-display {
-		--img-width: 10em;
-	}
+  .furniture-display {
+    --img-width: 10em;
+  }
 }
 @media (min-width: 720px) {
-	.furniture-display {
-		--img-width: 20em;
-	}
+  .furniture-display {
+    --img-width: 20em;
+  }
 }

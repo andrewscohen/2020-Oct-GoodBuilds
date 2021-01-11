@@ -29,8 +29,8 @@ body {
 
 .button-container {
   display: flex;
+  justify-content: center;
 }
-
 .button:hover {
   background: linear-gradient(
     to bottom,
