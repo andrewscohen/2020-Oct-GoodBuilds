@@ -11,6 +11,7 @@ html
         link(rel='stylesheet' href='/stylesheets/filtered-furniture-display.css' type='text/css')
         link(rel='stylesheet' href='/stylesheets/login.css' type='text/css')
         link(rel='stylesheet' href='/stylesheets/register.css' type='text/css')
+        link(rel='icon' href='/public/favicon.ico')
   body
     if locals.authenticated
       nav(class='navbar_login')
@@ -40,19 +41,12 @@ html
           //-   img(src='/assets/loupe.svg' id='icon_img')
           span(class='navbar_menu')
             div(class='navbar_button'): a(href="/users/login" type='button')
-<<<<<<< HEAD
-<<<<<<< HEAD
               img(src='/assets/userLogo.svg' id='navbar_login--icon')
               label(id='navbar_login--icontext') Log In
-=======
               //- img(src='/assets/userLogo.svg' id='navbar_login--icon')
               label(id='navbar_login--icontext') &#128736 Log In
->>>>>>> f8e918a45e9108798364dbc9dbe5e6995b358bc2
-=======
-    
               //- img(src='/assets/userLogo.svg' id='navbar_login--icon')
               label(id='navbar_login--icontext') &#128736 Log In
->>>>>>> fd168b5506f74416fa9d21429839e7e74c79295d
             div(class='navbar_button'): a(href="/users/register" type='button')
               //- img(src='/assets/userLogo.svg' id='navbar_login--icon')
               label(id='navbar_login--icontext') &#128736 Sign Up
