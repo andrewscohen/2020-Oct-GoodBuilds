@@ -21,7 +21,9 @@ body {
 	height: 100%;
 	width: auto;
 	font-family: Arial;
-	padding-left: 2em;
+	padding-left: 4em;
+	padding-right: 2em;
+	padding-top: 1em;
 }
 #login_search {
 	height: 45px;
@@ -78,27 +80,29 @@ body {
 	list-style: none;
 	align-items: center;
 	font-family: Arial;
+	margin-top: 35px;
 }
 
 .navbar_menu a,
 .button-menu {
 	text-decoration: none;
-	border: solid 1.5px black;
-	padding: 15px;
-	margin-right: 10px;
+	border: solid 0px black;
+	padding: 20px;
+	margin-right: 80px;
 	margin-left: 15px;
 	color: black;
 	border-radius: 6px;
 	font-family: Arial;
 	font-weight: bold;
+	
 
-	background-color: rgba(255, 244, 244, 0.2);
-	font-size: small;
+	background-color: rgba(255, 255, 255, 0.2);
+	font-size: x-large;
 }
 
 .button-menu:hover {
 	background-color: rgba(255, 255, 255, 0.4);
-	box-shadow: 4px 5px 10px 0px rgba(119, 104, 104, 0.753);
+	box-shadow: 4px 5px 10px 0px rgba(119, 104, 104, 0.8553);
 }
 .navbar_menu li {
 	height: -webkit-fit-content;
@@ -118,5 +122,5 @@ body {
 }
 .navbar_menu a:hover {
 	background-color: rgba(255, 255, 255, 0.4);
-	box-shadow: 4px 5px 10px 0px rgba(119, 104, 104, 0.753);
+	box-shadow: 4px 5px 10px 0px rgba(119, 104, 104, 0.8553);
 }
