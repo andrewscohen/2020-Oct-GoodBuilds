@@ -11,7 +11,7 @@ html
         link(rel='stylesheet' href='/stylesheets/filtered-furniture-display.css' type='text/css')
         link(rel='stylesheet' href='/stylesheets/login.css' type='text/css')
         link(rel='stylesheet' href='/stylesheets/register.css' type='text/css')
-        link(rel='icon' href='/public/favicon.ico')
+        link(rel='icon' href='/assets/favicon.ico')
   body
     if locals.authenticated
       nav(class='navbar_login')
@@ -41,10 +41,7 @@ html
           //-   img(src='/assets/loupe.svg' id='icon_img')
           span(class='navbar_menu')
             div(class='navbar_button'): a(href="/users/login" type='button')
-              img(src='/assets/userLogo.svg' id='navbar_login--icon')
-              label(id='navbar_login--icontext') Log In
               //- img(src='/assets/userLogo.svg' id='navbar_login--icon')
-              label(id='navbar_login--icontext') &#128736 Log In
               //- img(src='/assets/userLogo.svg' id='navbar_login--icon')
               label(id='navbar_login--icontext') &#128736 Log In
             div(class='navbar_button'): a(href="/users/register" type='button')
@@ -53,6 +50,5 @@ html
             //- div(class='logoutBtn')
             //-   form(action='/users/logout' method='post')
             //-     div(class='navbar_button'): button(type='submit' class='button-menu') Log Out
-
 
   block content

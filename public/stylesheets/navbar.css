@@ -115,11 +115,6 @@
   margin-right: 6%;
 }
 .navbar_menu a:hover {
-<<<<<<< HEAD
-	background-color: rgba(255, 255, 255, 0.4);
-	box-shadow: 4px 5px 10px 0px rgba(119, 104, 104, 0.8553);
-=======
   background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 4px 5px 10px 0px rgba(119, 104, 104, 0.8553);
->>>>>>> e18401fadab2edffac980f010c359118a45f98dd
 }
