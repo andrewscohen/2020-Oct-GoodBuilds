@@ -40,8 +40,7 @@ img {
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 }
-.details {
-}
+
 
 .descriptiontext {
 	font-size: 20px;
@@ -86,12 +85,11 @@ dd {
 	display: block;
 }
 .reviews {
-	border: solid 1px black;
+	/* border: solid 1px black; */
 	padding-top: 15px;
 	font-family: 'Roboto', sans-serif;
 }
-.createReviewContainer {
-}
+
 .inputReviewContainer textarea {
 	width: 99%;
 	/* right: 20px; */
@@ -127,4 +125,18 @@ dd {
 .reviews li {
 	list-style-type: none;
 	padding-left: 20px;
+}
+.displayReviewContainer h1{
+	padding-top: 20px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	font-size: 30px;
+	padding: 15px;
+	font-family: 'Ubuntu', sans-serif;
+}
+.reviewbutton{
+	margin: 15px;
+}
+.displayedReviews{
+	padding-left: 25px;
 }
