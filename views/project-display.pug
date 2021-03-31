@@ -24,7 +24,7 @@ block content
                         if locals.authenticated
                             .createReviewContainer
                                 h1 Leave a review:
-                                form(method='post' action='/reviews')
+                                form(method='post' action='/project/reviews')
                                     .inputReviewContainer
                                         textarea(name="content", cols="30", rows="10")
                                     .difficultyLevelContainer
@@ -56,4 +56,3 @@ block content
                                             li completionTime: #{review.completionTime}
                                             li difficultyLevel: #{review.difficultyLevel}
                                             //- button.editbutton.button Edit
-                    
