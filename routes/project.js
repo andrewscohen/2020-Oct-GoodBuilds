@@ -202,38 +202,44 @@ const reviewValidators = [
 ];
 
 
-
-// attempting to implement  review validators
-// const review = db.Review.build(
-//   { difficultyLevel, content, rating, completionTime, userId: req.session.auth.userId, projectId }
-// );
-
-// const validatorErrors = validationResult(req);
-
-// if (validatorErrors.isEmpty()) {
-//   await review.save();
-//   res.redirect(`/projects/${projectId}`);
-// } else {
-//   const errors = validatorErrors.array().map((error) => error.msg);
-//   req.locals.errors = errors;
-//   res.redirect(`/projects/${projectId}`);
-//   next(errors);
-// }
-
+//create a review route
  router.post(
      "/project/reviews",
+     reviewValidators,
      asyncHandler(async (req, res) => {
-       // console.log(req.session.user.id)
-       let { difficultyLevel, content, rating, completionTime, projectId } = req.body;
-       difficultyLevel = parseInt(difficultyLevel);
-       console.log(req.body);
-       rating = parseInt(rating);
-       const review = await db.Review.create({ difficultyLevel, content, rating, completionTime, userId: req.session.auth.userId, projectId });
-       console.log('Saved Review!')
-       res.redirect(`/projects/${projectId}`);
+        let { difficultyLevel, content, rating, completionTime, projectId } = req.body;
+        difficultyLevel = parseInt(difficultyLevel);
+        const review = db.Review.build(
+            { difficultyLevel, content, rating, completionTime, userId: req.session.auth.userId, projectId }
+          );
+
+          const validatorErrors = validationResult(req);
+          console.log('inside post review route')
+          if (validatorErrors.isEmpty()) {
+              console.log('validated')
+            await review.save();
+            res.redirect(`/projects/${projectId}`);
+          } else {
+            const errors = validatorErrors.array().map((error) => error.msg);
+            req.locals.errors = errors;
+            res.redirect(`/projects/${projectId}`);
+            next(errors);
+          }
      })
    );
 
 
+//    router.post(
+//     "/project/reviews",
+//     asyncHandler(async (req, res) => {
+//       let { difficultyLevel, content, rating, completionTime, projectId } = req.body;
+//       difficultyLevel = parseInt(difficultyLevel);
+//       console.log(req.body);
+//       rating = parseInt(rating);
+//       const review = await db.Review.create({ difficultyLevel, content, rating, completionTime, userId: req.session.auth.userId, projectId });
+//       console.log('Saved Review!')
+//       res.redirect(`/projects/${projectId}`);
+//     })
+//   );
 
 module.exports = router;

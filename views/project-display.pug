@@ -47,6 +47,8 @@ block content
                     div
                         .displayReviewContainer
                             h1 Reviews
+                            each error in errors
+                                div #{error}
                             each review in reviews
                                 div(class='displayedReviews') &#128736 User: #{review.User.userName}
                                     div= review.content
