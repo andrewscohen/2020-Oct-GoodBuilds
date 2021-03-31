@@ -1,5 +1,5 @@
 .login-container {
-  height: calc(100%);
+  height: calc(100% + 120px);
   width: 100%;
   display: flex;
   align-items: center;
@@ -12,6 +12,7 @@
   max-width: 640px;
   padding: 25px;
   background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
 }
 
 .login_head {
@@ -29,4 +30,15 @@
   height: 100vh;
   width: 100vw;
   z-index: -1;
+}
+
+.alert{
+  position: absolute;
+  margin-right: auto;
+  bottom: -100px;
+  left: 15%;
+  background: white;
+  opacity: 0.7;
+  border-radius: 5px;
+  padding: 1em;
 }

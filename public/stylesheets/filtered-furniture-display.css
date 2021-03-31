@@ -10,7 +10,7 @@
 .furniture-display {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--img-width), 1fr));
-  grid-gap: 2em;
+  grid-gap: 3em;
   justify-content: center;
 }
 
@@ -18,10 +18,8 @@
   height: var(--img-width);
   width: var(--img-width);
   position: relative;
-}
-
-.img-container {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .image {
