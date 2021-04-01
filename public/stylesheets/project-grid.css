@@ -1,0 +1,41 @@
+.projectgrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 15px;
+  margin-top: 150px;
+  margin-right: 0;
+}
+
+.column2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  /* background-color: rgba(228, 109, 128, 0.082); */
+  width: 570px;
+  overflow: scroll;
+}
+
+.column3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  /* background-color: rgba(120, 226, 120, 0.1); */
+  width: 570px;
+}
+
+#furniture_img {
+  max-height: 500px;
+  width: auto;
+  display: block;
+  margin: auto;
+}
+
+.img-wrapper {
+  /* background-color: rgba(206, 154, 59, 0.116); */
+  min-height: 40%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.column2::-webkit-scrollbar {
+  display: none;
+}
