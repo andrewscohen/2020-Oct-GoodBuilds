@@ -11,7 +11,10 @@ html
         link(rel='stylesheet' href='/stylesheets/filtered-furniture-display.css' type='text/css')
         link(rel='stylesheet' href='/stylesheets/login.css' type='text/css')
         link(rel='stylesheet' href='/stylesheets/register.css' type='text/css')
+        link(rel='stylesheet' href='/stylesheets/project-grid.css' type='text/css')
         link(rel='icon' href='/assets/favicon.ico')
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+        script(src="/javascripts/index.js" type="module" defer)
   body
     if locals.authenticated
       nav(class='navbar_login')
