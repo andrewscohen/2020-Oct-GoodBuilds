@@ -3,16 +3,17 @@
   justify-content: space-between;
   align-content: center;
   width: 100%;
-  height: 150px;
+  height: 120px;
   background-color: white;
   font-family: Arial;
   top: 0;
   position: fixed;
   z-index: 3;
+  border-bottom: 1px solid black;
   /* overflow: hidden; */
 }
 #navbar_logo {
-  height: 100px;
+  height: 80px;
   width: auto;
   font-family: Arial;
   padding-left: 4em;

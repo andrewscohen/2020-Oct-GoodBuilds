@@ -1,142 +1,190 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 .projectcontainer {
-	/* height: 100%; */
-	/* background-color: rgba(255, 255, 255, 0.9); */
+  padding-top: 70px;
+  /* height: 100%; */
+  /* background-color: rgba(255, 255, 255, 0.9); */
 }
 
 .projectgrid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	justify-items: center;
-	height: 100%;
-	margin-right: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+  margin: 8%;
 }
 
 img {
-	height: 65%;
-	/* width: 95%; */
-	grid-column: 1;
-	align-self: center;
+  /* height: 65%;
+	width: 95%;
+	grid-column: 1; */
+  align-self: center;
 }
 #furnitureimg {
-	width: 95%;
+  width: 450px;
+  height: 450px;
+  background-size: cover;
+  border-radius: 5px;
 }
 .rightcontainer {
-	grid-column: 2;
-	display: block;
-	width: 100%;
-	background-color: rgba(255, 255, 255, 0.9);
-	padding: 10px;
-	margin-top: 15px;
+  grid-column: 2;
+  display: block;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  margin-top: 15px;
+}
+.leftcontainer {
+  grid-column: 1;
+  display: block;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 7px;
+}
+.detailcontentleft {
+  grid-column: 1;
+  display: block;
+}
+.detailcontentright {
+  grid-column: 2;
+  display: block;
 }
 
 .projectname {
-	padding-top: 40px;
-	font-size: 40px;
+  font-size: 26px;
 }
 .description > p {
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
-
 .descriptiontext {
-	font-size: 20px;
-	font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
 
 dt {
-	float: left;
-	width: 50%;
-	background-color: lightgray;
+  float: left;
+  width: 50%;
+  background-color: lightgray;
 }
 
 dl {
-	font-size: 30px;
-	font-family: 'Montserrat', sans-serif;
-	text-align: center;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
 }
 
 dd,
 dt {
-	border: thin solid gray;
-	padding: 10px;
+  border: thin solid gray;
+  padding: 10px;
 }
 
 dd {
-	margin: 0;
+  margin: 0;
 }
 
 .rightcontainer p {
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
-	font-size: 30px;
-	padding: 15px;
-	font-family: 'Ubuntu', sans-serif;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-size: 30px;
+  padding: 15px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.reviews {
+  padding-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #projecttitle {
-	font-family: 'Ubuntu', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .difficultyLevelContainer {
-	display: block;
-}
-.reviews {
-	/* border: solid 1px black; */
-	padding-top: 15px;
-	font-family: 'Roboto', sans-serif;
+  display: block;
 }
 
 .inputReviewContainer textarea {
-	width: 99%;
-	/* right: 20px; */
-	align-self: center;
+  width: 99%;
+  /* right: 20px; */
+  align-self: center;
 }
 .difficultyLevelContainer,
 .ratingContainer,
 .completionTimeContainer {
-	padding: 15px;
-	font-size: larger;
+  padding: 15px;
+  font-size: larger;
 }
 
 .createReviewContainer label {
-	margin-right: 30px;
+  margin-right: 30px;
 }
 
 .createReviewContainer h1 {
-	margin-left: 10px;
+  margin-left: 10px;
 }
 
 .reviews h1,
 .reviews a {
-	font-size: 20px;
-	font-weight: 500;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .reviews a {
-	text-underline-offset: 2px;
-	text-decoration-thickness: 0.5px;
-	color: rgb(27, 71, 27);
+  text-underline-offset: 2px;
+  text-decoration-thickness: 0.5px;
+  color: rgb(27, 71, 27);
 }
 
 .reviews li {
-	list-style-type: none;
-	padding-left: 20px;
+  list-style-type: none;
+  padding-left: 20px;
 }
-.displayReviewContainer h1{
-	padding-top: 20px;
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
-	font-size: 30px;
-	padding: 15px;
-	font-family: 'Ubuntu', sans-serif;
+.displayReviewContainer h1 {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
-.reviewbutton{
-	margin: 15px;
+.reviewbutton {
+  margin: 15px;
 }
-.displayedReviews{
-	padding-left: 25px;
+.displayedReviews {
+  padding-left: 20px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.userName {
+  font-weight: bold;
+}
+
+.userReview {
+  padding: 2px;
+}
+
+.reviewList {
+  list-style: none;
+}
+
+.userIcons {
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  align-content: right;
+  width: 45%;
+  margin-right: 0;
+  margin-left: auto;
 }
