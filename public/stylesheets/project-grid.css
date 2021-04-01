@@ -39,3 +39,7 @@
 .column2::-webkit-scrollbar {
   display: none;
 }
+
+.form-hide {
+  display: none;
+}

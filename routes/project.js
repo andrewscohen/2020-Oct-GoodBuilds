@@ -261,18 +261,18 @@ router.post('/projects/reviews/update', reviewValidators,
     })
 )
 
+router.delete('/projects/reviews/delete', asyncHandler(async (req, res) => {
+    console.log('delete back end route hit')
+    const {reviewId} = req.body;
+    console.log(req.body)
 
-//    router.post(
-//     "/project/reviews",
-//     asyncHandler(async (req, res) => {
-//       let { difficultyLevel, content, rating, completionTime, projectId } = req.body;
-//       difficultyLevel = parseInt(difficultyLevel);
-//       console.log(req.body);
-//       rating = parseInt(rating);
-//       const review = await db.Review.create({ difficultyLevel, content, rating, completionTime, userId: req.session.auth.userId, projectId });
-//       console.log('Saved Review!')
-//       res.redirect(`/projects/${projectId}`);
-//     })
-//   );
+    const reviewToDelete = await db.Review.findByPk(reviewId);
+
+    await reviewToDelete.destroy()
+
+    return res.json('deleted')
+
+}))
+
 
 module.exports = router;
