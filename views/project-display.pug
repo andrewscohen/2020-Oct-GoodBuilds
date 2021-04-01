@@ -33,7 +33,7 @@ block content
                                 i(class="fa fa-star" aria-hidden="true") #{review.rating}
                                 i(class="fa fa-hourglass-half" aria-hidden="true") #{review.completionTime}
                                 i(class="fa fa-thermometer-quarter" aria-hidden="true") #{review.difficultyLevel}
-                                //- button.editbutton.button Edit
+                                button.editbutton.button(id="review-btn") Edit
         .reviews
             div
                 if locals.authenticated
@@ -59,33 +59,3 @@ block content
                             li: a(href='/users/login') &#128736   Existing users log in.
                             li: a(href='/users/register') &#128736    Create an account
 
-
-        //- h2 Add Review
-        //- button#review-add-btn(aria-label='add review' title='Add Review')
-        //- #modal(role='dialog' aria-modal='true' aria-labelledby='add-review-header')
-        //- button.close-btn(aria-label='close' title='Close') x
-        //- #review-form-container
-        //-     h2#add-review-header Add Review
-        //-     form#review-form
-        //-     .fieldset
-        //-         label(for='reviewName') Name
-        //-         input#reviewName(name='reviewName' required='')
-        //-     .fieldset
-        //-         label Rating
-        //-         .rate
-        //-         input#star5(type='radio' name='rate' value='5' onkeydown='navRadioGroup(event)' onfocus='setFocus(event)' required='')
-        //-         label(for='star5' title='5 stars') 5 stars
-        //-         input#star4(type='radio' name='rate' value='4' onkeydown='navRadioGroup(event)')
-        //-         label(for='star4' title='4 stars') 4 stars
-        //-         input#star3(type='radio' name='rate' value='3' onkeydown='navRadioGroup(event)')
-        //-         label(for='star3' title='3 stars') 3 stars
-        //-         input#star2(type='radio' name='rate' value='2' onkeydown='navRadioGroup(event)')
-        //-         label(for='star2' title='2 stars') 2 stars
-        //-         input#star1(type='radio' name='https://codepen.io/pen/rate' value='1' onkeydown='navRadioGroup(event)' onfocus='setFocus(event)')
-        //-         label(for='star1' title='1 star') 1 star
-        //-     .fieldset
-        //-         label(for='reviewComments') Comments
-        //-         textarea#reviewComments(name='reviewComments' cols='20' rows='5' required='')
-        //-     .fieldset.right
-        //-         button#submit-review-btn Save
-        //- .modal-overlay

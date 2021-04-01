@@ -1,0 +1,73 @@
+extends layout
+include utils.pug
+
+block content
+  .projectgrid
+    .column2
+      .img-wrapper
+        img(src=project.imgLink id='furniture_img')
+        .displayReviewContainer
+          h1 Reviews
+          each review in reviews
+            form(method='post' action='/projects/reviews/update' id="review-form" class="")
+              .inputReviewContainer
+                  textarea(name="content", cols="30", rows="10") #{review.content}
+              .difficultyLevelContainer
+                  label(for="difficultyLevel") Please choose a number between 1-10 for difficulty level:
+                  input(type="number", name='difficultyLevel',min='0', max='10' value=review.difficultyLevel)
+              .ratingContainer
+                  label(for='rating') Please choose a number between 1-5 for your rating of enjoyment in building this project:
+                  input(type="number", name='rating',min='0', max='5', value=review.rating)
+              .completionTimeContainer
+                  label(for='completionTime') Please specify the amount of time it took to complete this project:
+                  input(type='text', name='completionTime',placeholder='Amount of time' value=review.completionTime)
+                  input(type='hidden',name='projectId',value=projectId)
+                  input(type='hidden',name='reviewId',value=review.id)
+                  button.reviewbutton.button Submit
+            div(class='displayedReviews') &#128736 User: #{review.User.userName}
+                div= review.content
+                div
+                    ul
+                        li rating: #{review.rating}
+                        li completionTime: #{review.completionTime}
+                        li difficultyLevel: #{review.difficultyLevel}
+                        button.editbutton.button(id=`review-btn`) Edit
+                        button.button(id=`delete-btn-${review.id}`) Delete
+    .column3
+                .projectname(id='projecttitle')= project.name
+                .description
+                    p Description
+                    .descriptiontext= project.description
+                .details
+                    p Details
+                    dl.detailcontent
+                        dt Furniture Type
+                        dd= furnitureTypeText
+                        dt Brand
+                        dd= project.brand
+                        dt Serial Number
+                        dd= project.serialNumber
+                .reviews
+                    div
+                        if locals.authenticated
+                            .createReviewContainer
+                                h1 Leave a review:
+                                form(method='post' action='/project/reviews')
+                                    .inputReviewContainer
+                                        textarea(name="content", cols="30", rows="10")
+                                    .difficultyLevelContainer
+                                        label(for="difficultyLevel") Please choose a number between 1-10 for difficulty level:
+                                        input(type="number", name='difficultyLevel',min='0', max='10')
+                                    .ratingContainer
+                                        label(for='rating') Please choose a number between 1-5 for your rating of enjoyment in building this project:
+                                        input(type="number", name='rating',min='0', max='5')
+                                    .completionTimeContainer
+                                        label(for='completionTime') Please specify the amount of time it took to complete this project:
+                                        input(type='text', name='completionTime',placeholder='Amount of time')
+                                        input(type='hidden',name='projectId',value=projectId)
+                                        button.reviewbutton.button Submit
+                        else
+                            .userNotLoggedInReview
+                                h1 To leave a review please create an account and log in.
+                                    li: a(href='/users/login') &#128736   Existing users log in.
+                                    li: a(href='/users/register') &#128736    Create an account.
