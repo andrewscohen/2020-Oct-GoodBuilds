@@ -20,7 +20,7 @@
   --img-width: 12em;
 }
 
-.furniture_container {
+.furniture-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--img-width), 1fr));
   /* grid-template-columns: repeat(4, 1fr); */
@@ -36,7 +36,7 @@
   justify-content: center;
 }
 
-.furniture_type_icon {
+.furniture-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +49,7 @@
   /* margin: 3em; */
 }
 
-#furniture_logo {
+#furniture-img {
   height: var(--img-width);
   /* width: var(--img-width); */
   /* margin: auto; */
@@ -60,18 +60,18 @@
   /* padding: 3px; */
   /* border-radius: 50%; */
 }
-.furniture_type_icon > a > p {
+.furniture-card > a > p {
   color: black;
   align-content: center;
   font-family: montserrat;
   padding-left: 1px;
 }
 
-.furniture_type_icon > a > p > i {
+.furniture-card > a > p > i {
   color: black;
   padding-left: 5px;
 }
-.furniture_type_icon > a:visited > p {
+.furniture-card > a:visited > p {
   color: rgb(57, 56, 56);
 }
 
@@ -86,29 +86,29 @@
   text-align: center;
 }
 
-.furniture_type_icon:hover #furniture_logo {
+.furniture-card:hover #furniture-img {
   opacity: 0.3;
 }
 
-.furniture_type_icon:hover .middle {
+.furniture-card:hover .middle {
   opacity: 1;
 }
 /*
-#furniture_logo a {
+#furniture-img a {
   filter: grayscale(1);
   transition: all ease 0.6s;
 }
-#furniture_logo a:hover {
+#furniture-img a:hover {
   filter: grayscale(0);
 } */
 
 @media (min-width: 320px) {
-  .furniture_container {
+  .furniture-card-container {
     --img-width: 10em;
   }
 }
 @media (min-width: 720px) {
-  .furniture_container {
+  .furniture-card-container {
     --img-width: 15em;
   }
 }

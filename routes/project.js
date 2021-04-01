@@ -174,7 +174,7 @@ router.get('/projects/:id(\\d+)', csrfProtection,
         const project = await db.Project.findByPk(projectId);
         const reviews = await db.Review.findAll({ where: { projectId: projectId }, include: { model: db.User } })
         let furnitureTypeText = furnitureTypeRename(project.furnitureType);
-        res.render('project-grid', {
+        res.render('project-display', {
             title: 'Edit Project',
             project, reviews, projectId, furnitureTypeText,
             csrfToken: req.csrfToken(),
