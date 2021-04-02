@@ -4,7 +4,7 @@ block content
         div(class='furniture-card-container')
             each furniture in furnitureTypes
                 div(class='furniture-card')
-                    a(href=`/projects/${furniture.id}` style='text-decoration: none')
+                    a(href=`/project/${furniture.id}` style='text-decoration: none')
                         img(src= furniture.imgLink id='furniture-img' )
                         p= furniture.name
                             i(class="fas fa-plus-circle")

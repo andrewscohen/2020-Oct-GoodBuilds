@@ -188,3 +188,7 @@ dd {
   margin-right: 0;
   margin-left: auto;
 }
+
+.form-hide {
+  display: none;
+}
