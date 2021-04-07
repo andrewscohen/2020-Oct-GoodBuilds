@@ -18,16 +18,14 @@
   <h3 align="center">Bad Reads</h3>
 
   <p align="center">
-    "Misery Loves Company"
-    <br />
-    <a href="https://github.com/andrewscohen/2020.11.badReads/wiki"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/andrewscohen/2020-Oct-GoodBuilds/wiki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="http://bad-reads-app.herokuapp.com/">View Demo</a>
+    <a href="https://goodbuilds1.herokuapp.com/">View Demo</a>
     ·
-    <a href="https://github.com/andrewscohen/2020.11.badReads/issues">Report Bug</a>
+    <a href="https://github.com/andrewscohen/2020-Oct-GoodBuilds/issues">Report Bug</a>
     ·
-    <a href="https://github.com/andrewscohen/2020.11.badReads/issues">Request Feature</a>
+    <a href="https://github.com/andrewscohen/2020-Oct-GoodBuilds/issues">Request Feature</a>
   </p>
 </p>
 
@@ -61,63 +59,40 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-Implemented a user friendly platform to review and recommend books to people who enjoy books so bad, they are “good”.
-
-
 ### Built With
-* [Javascript]()
-* [Express](https://expressjs.com/)
-* [Pug](https://pugjs.org/api/getting-started.html)
-* [Sequelize](sequelize.org)
-* [PostgreSQL](https://www.postgresql.org/)
-* [Bcrypt.js](https://www.npmjs.com/package/bcryptjs)
-
-
+- PostgreSQL
+- Express.js
+- Pug.js
+- JavaScript
+- CSS
+- Bcryptjs
+- Express-session
+- Express-validator
+- Node.js
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Installation
 
-To get started follow the following steps
+To run this application locally, you'll need to:
 
-### Prerequisites
-- npm
-```npm install npm@latest -g```
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/andrewscohen/2020.11.badReads.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-
+1. `git clone` this repo
+2. `cd` into the local repo
+3. `npm install` to install the dependencies
+4. Create a `.env` file based on the `.env.example` file included in the repo with your own values
+5. Create a user on your local machine with the username and password specified in your `.env` file in PostgreSQL
+6. Run `npx dotenv sequelize db:create` to create the database
+7. If the sequelize module is not found, try running `npx dotenv sequelize-cli db:create` and replace sequelize with sequelize-cli for the rest of these commands
+8. Run `npx dotenv sequelize db:migrate` to run the migrations
+9. Run `npx dotenv sequelize db:seed:all` to seed the database
+10. Finally, start the development server with `npm start`. The scripts in the package.json should do the work. You'll see the local address you can use show up in the terminal.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-- Demo Login
-<img src="https://raw.githubusercontent.com/andrewscohen/2020.11.badReads/main/public/BadReads-DemoLogin.gif" /> 
-
-- Filtering Books by Genre
-<img src="https://github.com/andrewscohen/2020.11.badReads/blob/main/public/BadReads-HomeGenreFilter.gif?raw=true" />
-
-- Be able to set Rating, Review and Status of the book (Ex: Reading, Want to Read and Read)
-<img src="https://github.com/andrewscohen/2020.11.badReads/blob/main/public/BadReads-RatingReview.gif?raw=true" />
-
-- Filter Own Bookshelf by book status
-<img src="https://github.com/andrewscohen/2020.11.badReads/blob/main/public/BadReads-BookshelfFilter.gif?raw=true" />
-
-
 <!-- ROADMAP -->
 ## Roadmap
 
-Checkout The Planning At The [Wiki](https://github.com/andrewscohen/2020-Oct-GoodBuilds/wiki) Section
-
-
+Checkout The Planning Docs At The [Wiki](https://github.com/andrewscohen/2020-Oct-GoodBuilds/wiki) Section
 
 
 <!-- CONTACT -->
@@ -131,6 +106,3 @@ Michael Digiovanni - [LinkedIn](https://www.linkedin.com/in/michael-digiovanni-2
 ---
 Olga Thompson - [LinkedIn](https://www.linkedin.com/in/olga-thompson-35937515a/) [Github](https://github.com/clarion22)
 ---
-
-
-Project Link: [Bad Reads](https://github.com/andrewscohen/2020.11.badReads)
