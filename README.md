@@ -82,11 +82,11 @@ Checkout The Planning Docs At The [Wiki](https://github.com/andrewscohen/2020-Oc
 <!-- CONTACT -->
 ## Contact
 
-Amber Horn - [LinkedIn](https://www.linkedin.com/in/amberjolie/) [Github](https://github.com/AmberJolieH)
----
-Andrew Cohen - [LinkedIn](https://www.linkedin.com/in/mrandrewcohen/) [Github](https://github.com/andrewscohen)
----
-Michael Digiovanni - [LinkedIn](https://www.linkedin.com/in/michael-digiovanni-292ab464/) [Github](https://github.com/midigi)
----
-Olga Thompson - [LinkedIn](https://www.linkedin.com/in/olga-thompson-35937515a/) [Github](https://github.com/clarion22)
----
+### Amber Horn: <a href="https://github.com/AmberJolieH" rel="noopener noreferrer" target="blank" title="github.com/AmberJolieH"><img align="center" src="https://simpleicons.org/icons/github.svg" alt="link to Amber's Github" height="30" width="40" /></a><a href="https://www.linkedin.com/in/amberjolie/" rel="noopener noreferrer" target="blank" title="linkedin.com/in/amberjolie/"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="link to Amber's LinkedIn" height="30" width="40" /></a>
+
+### Andrew Cohen: <a href="https://github.com/andrewscohen" rel="noopener noreferrer" target="blank" title="github.com/andrewscohen"><img align="center" src="https://simpleicons.org/icons/github.svg" alt="link to Andrew's Github" height="30" width="40" /></a><a href="https://www.linkedin.com/in/mrandrewcohen/" rel="noopener noreferrer" target="blank" title="linkedin.com/in/mrandrewcohen/"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="link to Andrew's LinkedIn" height="30" width="40" /></a>
+  
+### Michael Digiovanni: <a href="https://github.com/midigi" rel="noopener noreferrer" target="blank" title="github.com/midigi"><img align="center" src="https://simpleicons.org/icons/github.svg" alt="link to Michael's Github" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/michael-digiovanni-292ab464/" rel="noopener noreferrer" target="blank" title="linkedin.com/in/michael-digiovanni-292ab464/"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="link to Michaels's LinkedIn" height="30" width="40" /></a>
+
+### Olga Thompson: <a href="https://github.com/clarion22" rel="noopener noreferrer" target="blank" title="github.com/clarion22"><img align="center" src="https://simpleicons.org/icons/github.svg" alt="link to Olga's Github" height="30" width="40" /></a><a href="https://www.linkedin.com/in/olga-thompson-35937515a/" rel="noopener noreferrer" target="blank" title="linkedin.com/in/olga-thompson-35937515a/"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="link to Olga's LinkedIn" height="30" width="40" /></a>
