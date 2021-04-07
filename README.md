@@ -11,9 +11,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/andrewscohen/2020.11.badReads">
-    <img src="https://user-images.githubusercontent.com/67562159/113816101-4c611a80-9742-11eb-9c9f-61687fb8c89b.png
-" alt="Good Builds Logo">
+  <a href="https://github.com/andrewscohen/2020-Oct-GoodBuilds">
+    <img src="https://user-images.githubusercontent.com/67562159/113816101-4c611a80-9742-11eb-9c9f-61687fb8c89b.png" alt="Good Builds Logo">
   </a>
 
   <h3 align="center">Good Builds</h3>
