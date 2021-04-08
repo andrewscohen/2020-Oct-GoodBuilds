@@ -33,8 +33,11 @@ block content
                                 i(class="fa fa-star" aria-hidden="true") #{review.rating}
                                 i(class="fa fa-hourglass-half" aria-hidden="true") #{review.completionTime}
                                 i(class="fa fa-thermometer-quarter" aria-hidden="true") #{review.difficultyLevel}
-                                if userId === review.userId
-                                    button(id=`review-btn-${review.id}`) Edit
+                                if locals.authenticated
+                                    if userId === review.userId
+                                        button(id=`review-btn-${review.id}`) Edit
+                                else
+                                    null
                         form(method='post' action='/project/reviews/update' id=`review-form-${review.id}` class="form-hide")
                             .inputReviewContainer
                                 textarea(name="content", cols="30", rows="10") #{review.content}
