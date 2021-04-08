@@ -6,7 +6,6 @@ const router = express.Router();
 
 router.get('/furnitureType/', asyncHandler (async (req, res) => {
     const furnitureType = req.params.furnitureType;
-    // console.log(furnitureType);
     const furnitureTypes = await db.Project.findAll(
         {
         where:

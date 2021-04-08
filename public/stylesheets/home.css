@@ -23,10 +23,6 @@
 .furniture-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--img-width), 1fr));
-  /* grid-template-columns: repeat(4, 1fr); */
-  /* grid-template-rows: repeat(3, 1fr); */
-  /* width: fit-content; */
-  /* height: fit-content; */
   grid-gap: 2em;
   justify-content: center;
   padding-bottom: 5em;
@@ -46,20 +42,13 @@
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border-radius: 1em;
-
-  /* margin: 3em; */
 }
 
 #furniture-img {
   height: var(--img-width);
   width: var(--img-width);
-  /* margin: auto; */
   margin-top: 1em;
   border-radius: 5px;
-
-  /* border: 1px solid grey; */
-  /* padding: 3px; */
-  /* border-radius: 50%; */
 }
 .furniture-card > a > p {
   color: black;
@@ -97,14 +86,6 @@
 .furniture-card:hover .middle {
   opacity: 1;
 }
-/*
-#furniture-img a {
-  filter: grayscale(1);
-  transition: all ease 0.6s;
-}
-#furniture-img a:hover {
-  filter: grayscale(0);
-} */
 
 @media (min-width: 320px) {
   .furniture-card-container {

@@ -94,17 +94,12 @@ router.post('/project', csrfProtection, projectValidators,
             );
 
             const validatorErrors = validationResult(req);
-            console.log('inside post review route')
             if (validatorErrors.isEmpty()) {
-                console.log('validated')
               await review.save();
               res.redirect(`/project/${projectId}`);
             } else {
                 const errors = validatorErrors.array().map((error) => error.msg);
-                console.log('request errors before')
                 res.redirect(`/project/${projectId}`);
-                console.log('request errors after')
-                // next(errors)
             }
        })
      );
@@ -168,12 +163,10 @@ router.get('/project/:id(\\d+)', csrfProtection,
     asyncHandler(async (req, res) => {
         if (req.locals && req.locals.errors) {
             const { errors } = req.locals.errors;
-            console.log('errors', errors)
         }
         const projectId = parseInt(req.params.id, 10);
         let userId;
         req.session.auth ? userId = req.session.auth.userId : userId = null;
-        // const userId = if (req.session.auth) null;
         const project = await db.Project.findByPk(projectId);
         const reviews = await db.Review.findAll({ where: { projectId: projectId }, include: { model: db.User }, order: [['createdAt', 'DESC']]})
         let furnitureTypeText = furnitureTypeRename(project.furnitureType);
@@ -247,7 +240,6 @@ router.post('/project/reviews/update', reviewValidators,
         let { difficultyLevel, content, rating, completionTime, projectId, reviewId } = req.body;
         difficultyLevel = parseInt(difficultyLevel);
         reviewId = parseInt(reviewId);
-        console.log(difficultyLevel, content, rating, completionTime, projectId, reviewId)
         const reviewToUpdate = await db.Review.findByPk(reviewId);
         reviewToUpdate.content = content;
         reviewToUpdate.difficultyLevel = difficultyLevel;

@@ -4,8 +4,6 @@ const { check, validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs')
 const { loginUser, logoutUser } = require('../auth')
 
-// This is a comment
-
 //setup
 const db = require('../db/models')
 const { csrfProtection, asyncHandler } = require('./utils')
@@ -23,12 +21,7 @@ router.get('/register', csrfProtection, (req, res) => {
 });
 
 
-// router.get('/', function (req, res, next) {
-//   res.send('respond with a resource');
-// });
-
 // START OF USER REGISTRATION
-
 const userValidators = [
   check('userName')
     .exists({ checkFalsy: true })
@@ -154,7 +147,6 @@ router.post('/login', csrfProtection, loginValidators,
 
         if (passwordMatch) {
           loginUser(req, res, user);
-          console.log('YOU ARE LOGGED IN:  ', req.session);
           return res.redirect('/');
         }
       }
@@ -176,7 +168,6 @@ router.post('/login', csrfProtection, loginValidators,
 // START OF LOGOUT ROUTES
 router.post('/logout', (req, res) => {
   logoutUser(req, res);
-  console.log('YOU ARE LOGGED OUT:  ', req.session);
   res.redirect('/users/login');
 });
 // END OF LOGOUT ROUTES
@@ -188,7 +179,6 @@ router.post(
     const email = "demo@demo.com";
     const user = await db.User.findOne({ where: { email } });
     loginUser(req, res, user);
-    console.log('YOU ARE THE DEMO USER', req.session);
     res.redirect("/");
   }));
 
