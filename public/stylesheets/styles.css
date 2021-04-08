@@ -20,17 +20,13 @@ body {
   border-radius: 6px;
   border: none;
   height: 36px;
-  width: 90px;
+  width: 100%;
   cursor: pointer;
   /* margin-top: 3px; */
   padding: 3px;
   margin: 3px;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-}
 .button:hover {
   background: linear-gradient(
     to bottom,

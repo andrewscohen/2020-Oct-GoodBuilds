@@ -24,21 +24,8 @@
 .background-img {
   position: fixed;
   background-image: url("/assets/4.svg");
-  /* background-repeat: repeat; */
   background-size: cover;
-  /* opacity: 0.5; */
   height: 100vh;
   width: 100vw;
   z-index: -1;
 }
-
-/* .alert {
-  position: absolute;
-  margin-right: auto;
-  top: 145px;
-  left: 15%;
-  background: white;
-  opacity: 0.7;
-  border-radius: 5px;
-  padding: 1em;
-} */
