@@ -14,6 +14,15 @@
   justify-content: center;
 }
 
+.furniture-type-page-layout{
+  margin-top: 140px;
+}
+
+.fa-arrow-circle-right{
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
 .img-container {
   height: var(--img-width);
   width: var(--img-width);
