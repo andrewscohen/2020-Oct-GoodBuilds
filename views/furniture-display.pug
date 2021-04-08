@@ -1,11 +1,11 @@
 extends layout.pug
 block content
-   .furniture-filter-display-container
-        .furniture-display
+    div(class='furniture-type-page-layout')
+        div(class='furniture-card-container')
             each furniture in furnitureTypes
-                .img-container
-                    a(href=`/projects/${furniture.id}` style='text-decoration: none')
-                        img(src= furniture.imgLink class='image' )
+                div(class='furniture-card')
+                    a(href=`/project/${furniture.id}` style='text-decoration: none')
+                        img(src= furniture.imgLink id='furniture-img' )
                         p= furniture.name
-                    div(class='middle')
-                        i(class="fas fa-plus-circle")
+                            i(class="fas fa-plus-circle")
+                        div(class='middle')

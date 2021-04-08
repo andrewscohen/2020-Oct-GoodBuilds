@@ -5,11 +5,11 @@ block content
   .projectgrid
     .column2
       .img-wrapper
-        img(src=project.imgLink id='furniture_img')
+        img(src=project.imgLink id='furniture-img')
         .displayReviewContainer
           h1 Reviews
           each review in reviews
-            form(method='post' action='/projects/reviews/update' id="review-form" class="")
+            form(method='post' action='/project/reviews/update' id="review-form" class="")
               .inputReviewContainer
                   textarea(name="content", cols="30", rows="10") #{review.content}
               .difficultyLevelContainer

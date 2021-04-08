@@ -34,7 +34,7 @@ const projectValidators = [
         .withMessage('Serial Number must not be more than 100 characters long'),
 ];
 //ROUTES
-router.post('/projects', csrfProtection, projectValidators,
+router.post('/project', csrfProtection, projectValidators,
     asyncHandler(async (req, res) => {
         const {
             name,
@@ -98,11 +98,11 @@ router.post('/projects', csrfProtection, projectValidators,
             if (validatorErrors.isEmpty()) {
                 console.log('validated')
               await review.save();
-              res.redirect(`/projects/${projectId}`);
+              res.redirect(`/project/${projectId}`);
             } else {
                 const errors = validatorErrors.array().map((error) => error.msg);
                 console.log('request errors before')
-                res.redirect(`/projects/${projectId}`);
+                res.redirect(`/project/${projectId}`);
                 console.log('request errors after')
                 // next(errors)
             }
@@ -164,19 +164,20 @@ router.post('/projects', csrfProtection, projectValidators,
         return renamedFurniture;
     }
 
-router.get('/projects/:id(\\d+)', csrfProtection,
+router.get('/project/:id(\\d+)', csrfProtection,
     asyncHandler(async (req, res) => {
         if (req.locals && req.locals.errors) {
             const { errors } = req.locals.errors;
             console.log('errors', errors)
         }
         const projectId = parseInt(req.params.id, 10);
+        const {userId} = req.session.auth
         const project = await db.Project.findByPk(projectId);
         const reviews = await db.Review.findAll({ where: { projectId: projectId }, include: { model: db.User } })
         let furnitureTypeText = furnitureTypeRename(project.furnitureType);
-        res.render('project-grid', {
+        res.render('project-display', {
             title: 'Edit Project',
-            project, reviews, projectId, furnitureTypeText,
+            project, reviews, projectId, furnitureTypeText, userId,
             csrfToken: req.csrfToken(),
         });
     }));
@@ -236,10 +237,10 @@ router.post('/project/delete/:id(\\d+)', csrfProtection,
         const projectId = parseInt(req.params.id, 10);
         const project = await db.Project.findByPk(projectId);
         await project.destroy();
-        res.redirect('/projects');
+        res.redirect('/project');
     }));
 
-router.post('/projects/reviews/update', reviewValidators,
+router.post('/project/reviews/update', reviewValidators,
     asyncHandler(async (req, res) => {
         let { difficultyLevel, content, rating, completionTime, projectId, reviewId } = req.body;
         difficultyLevel = parseInt(difficultyLevel);
@@ -254,14 +255,14 @@ router.post('/projects/reviews/update', reviewValidators,
         const validatorErrors = validationResult(req);
         if (validatorErrors.isEmpty()) {
             await reviewToUpdate.save()
-            return res.redirect(`/projects/${projectId}`);
+            return res.redirect(`/project/${projectId}`);
         } else {
-            return res.redirect(`/projects/${projectId}`);
+            return res.redirect(`/project/${projectId}`);
         }
     })
 )
 
-router.delete('/projects/reviews/delete', asyncHandler(async (req, res) => {
+router.delete('/project/reviews/delete', asyncHandler(async (req, res) => {
     console.log('delete back end route hit')
     const {reviewId} = req.body;
     console.log(req.body)
