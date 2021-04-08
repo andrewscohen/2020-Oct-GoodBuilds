@@ -26,34 +26,30 @@ block content
                 .displayReviewContainer
                     h1 Reviews
                     each review in reviews
-                        script
-                            - let buttonClicked="#{false}"
-                        if buttonClicked === true
-                             form(method='post' action='/project/reviews/update' id="review-form" class="")
-                                .inputReviewContainer
-                                    textarea(name="content", cols="30", rows="10") #{review.content}
-                                .difficultyLevelContainer
-                                    label(for="difficultyLevel") Please choose a number between 1-10 for difficulty level:
-                                    input(type="number", name='difficultyLevel',min='0', max='10' value=review.difficultyLevel)
-                                .ratingContainer
-                                    label(for='rating') Please choose a number between 1-5 for your rating of enjoyment in building this project:
-                                    input(type="number", name='rating',min='0', max='5', value=review.rating)
-                                .completionTimeContainer
-                                    label(for='completionTime') Please specify the amount of time it took to complete this project:
-                                    input(type='text', name='completionTime',placeholder='Amount of time' value=review.completionTime)
-                                    input(type='hidden',name='projectId',value=projectId)
-                                    input(type='hidden',name='reviewId',value=review.id)
-                                    button(id='review-btn') Submit
-                        else
-                            div.displayedReviews
-                                div.userName &#128736 #{review.User.userName}
-                                div.userReview= review.content
-                                div.userIcons
-                                    i(class="fa fa-star" aria-hidden="true") #{review.rating}
-                                    i(class="fa fa-hourglass-half" aria-hidden="true") #{review.completionTime}
-                                    i(class="fa fa-thermometer-quarter" aria-hidden="true") #{review.difficultyLevel}
-                                    if userId === review.userId
-                                        button(id='review-btn') Edit
+                        div.displayedReviews
+                            div.userName &#128736 #{review.User.userName}
+                            div.userReview= review.content
+                            div.userIcons
+                                i(class="fa fa-star" aria-hidden="true") #{review.rating}
+                                i(class="fa fa-hourglass-half" aria-hidden="true") #{review.completionTime}
+                                i(class="fa fa-thermometer-quarter" aria-hidden="true") #{review.difficultyLevel}
+                                if userId === review.userId
+                                    button(id=`review-btn-${review.id}`) Edit
+                        form(method='post' action='/project/reviews/update' id=`review-form-${review.id}` class="form-hide")
+                            .inputReviewContainer
+                                textarea(name="content", cols="30", rows="10") #{review.content}
+                            .difficultyLevelContainer
+                                label(for="difficultyLevel") Please choose a number between 1-10 for difficulty level:
+                                input(type="number", name='difficultyLevel',min='0', max='10' value=review.difficultyLevel)
+                            .ratingContainer
+                                label(for='rating') Please choose a number between 1-5 for your rating of enjoyment in building this project:
+                                input(type="number", name='rating',min='0', max='5', value=review.rating)
+                            .completionTimeContainer
+                                label(for='completionTime') Please specify the amount of time it took to complete this project:
+                                input(type='text', name='completionTime',placeholder='Amount of time' value=review.completionTime)
+                                input(type='hidden',name='projectId',value=projectId)
+                                input(type='hidden',name='reviewId',value=review.id)
+                                button(id=`review-btn-${review.id}`) Submit
         .reviews
             div
                 if locals.authenticated

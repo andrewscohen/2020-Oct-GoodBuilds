@@ -6,15 +6,17 @@ window.addEventListener("load", (event)=>{
 //show and hide edit review form
 //in progress
 $(document).ready(function(){
-    let buttonClicked = false
-    $("#review-btn").click(function(){
+    // let buttonClicked = false
+    $('button[id^=review-btn]').click(function(){
      console.log('clicked the edit button')
-     if (buttonClicked === true) {
-        buttonClicked = false
-    } else {
-        buttonClicked = true;
-    }
-     $("#review-form").toggleClass("form-hide")
+     let reviewId = parseInt(this.id.slice(-1))
+     console.log(`${reviewId}`)
+    //  if (buttonClicked === true) {
+    //     buttonClicked = false
+    // } else {
+    //     buttonClicked = true;
+    // }
+     $(`form[id^=review-form-${reviewId}]`).toggleClass("form-hide")
     });
   });
 

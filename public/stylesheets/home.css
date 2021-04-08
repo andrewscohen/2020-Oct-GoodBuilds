@@ -52,7 +52,7 @@
 
 #furniture-img {
   height: var(--img-width);
-  /* width: var(--img-width); */
+  width: var(--img-width);
   /* margin: auto; */
   margin-top: 1em;
   border-radius: 5px;

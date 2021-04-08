@@ -5,6 +5,7 @@
 
 .furniture-display {
   --img-width: 20em;
+  --img-height: 20em;
 }
 
 .furniture-display {
@@ -25,14 +26,14 @@
 }
 .img-container {
   height: var(--img-width);
-  width: var(--img-width);
+  width: var(--img-height);
   position: relative;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
 .image {
-  height: var(--img-width);
+  height: var(--img-height);
   width: var(--img-width);
   opacity: 1;
   display: block;
