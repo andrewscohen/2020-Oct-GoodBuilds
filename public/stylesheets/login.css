@@ -32,13 +32,13 @@
   z-index: -1;
 }
 
-.alert{
+/* .alert {
   position: absolute;
   margin-right: auto;
-  bottom: -155px;
+  top: 145px;
   left: 15%;
   background: white;
   opacity: 0.7;
   border-radius: 5px;
   padding: 1em;
-}
+} */

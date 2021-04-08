@@ -159,7 +159,7 @@ router.post('/login', csrfProtection, loginValidators,
         }
       }
 
-      error.push('There is no match for that email or password. Please enter again')
+      errors.push('There is no match for that email or password. Please enter again')
     } else {
       errors = validatorErrors.array().map((error) => error.msg)
     }
