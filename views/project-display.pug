@@ -7,21 +7,12 @@ block content
             .leftcontainer
                 img(src=project.imgLink id='furnitureimg')
                 .description
-                    //- p Description
                     .descriptiontext= project.description
             .rightcontainer
                 .projectname(id='projecttitle')= project.name
                 .details
                     div.detailcontentleft By: #{project.brand}
                     div.detailcontentright Serial Number: #{project.serialNumber}
-                    //- p Details
-                    //- dl.detailcontent
-                    //-     dt Furniture Type
-                    //-     dd= furnitureTypeText
-                    //-     dt Brand
-                    //-     dd= project.brand
-                    //-     dt Serial Number
-                    //-     dd= project.serialNumber
                 div
                 .displayReviewContainer
                     h1 Reviews
@@ -33,8 +24,11 @@ block content
                                 i(class="fa fa-star" aria-hidden="true") #{review.rating}
                                 i(class="fa fa-hourglass-half" aria-hidden="true") #{review.completionTime}
                                 i(class="fa fa-thermometer-quarter" aria-hidden="true") #{review.difficultyLevel}
-                                if userId === review.userId
-                                    button(id=`review-btn-${review.id}`) Edit
+                                if locals.authenticated
+                                    if userId === review.userId
+                                        button(id=`review-btn-${review.id}`) Edit
+                                else
+                                    null
                         form(method='post' action='/project/reviews/update' id=`review-form-${review.id}` class="form-hide")
                             .inputReviewContainer
                                 textarea(name="content", cols="30", rows="10") #{review.content}
@@ -68,7 +62,6 @@ block content
                                 label(for='completionTime') Please specify the amount of time it took to complete this project:
                                 input(type='text', name='completionTime',placeholder='Amount of time')
                                 input(type='hidden',name='projectId',value=projectId)
-                                //- input(type='hidden',name='reviewId',value=review.id)
                                 button.reviewbutton.button Submit
                 else
                     .userNotLoggedInReview

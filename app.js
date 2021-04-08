@@ -67,6 +67,4 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-
-// this is Amber git test
 module.exports = app;

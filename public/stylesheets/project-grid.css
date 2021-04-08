@@ -10,7 +10,6 @@
 .column2 {
   grid-column-start: 2;
   grid-column-end: 3;
-  /* background-color: rgba(228, 109, 128, 0.082); */
   width: 570px;
   overflow: scroll;
 }
@@ -18,7 +17,6 @@
 .column3 {
   grid-column-start: 3;
   grid-column-end: 4;
-  /* background-color: rgba(120, 226, 120, 0.1); */
   width: 570px;
 }
 
@@ -30,7 +28,6 @@
 }
 
 .img-wrapper {
-  /* background-color: rgba(206, 154, 59, 0.116); */
   min-height: 40%;
   width: 100%;
   overflow: hidden;

@@ -75,8 +75,6 @@ const openModal = () => {
 };
 
 const submitAddReview = (e) => {
-  // console.log(e);
-  console.log('Form subbmitted!');
   e.preventDefault();
   closeModal();
 };
@@ -96,18 +94,13 @@ const setFocus = (evt) => {
   const rateRadios = document.getElementsByName('rate');
   const rateRadiosArr = Array.from(rateRadios);
   const anyChecked = rateRadiosArr.some(radio => { return radio.checked === true; });
-  // console.log('anyChecked', anyChecked);
   if (!anyChecked) {
     const star1 = document.getElementById('star1');
     star1.focus();
-    // star1.checked = true;
   }
 };
 
 const navRadioGroup = (evt) => {
-  // console.log('key', evt.key, 'code', evt.code, 'which', evt.which);
-  // console.log(evt);
-
   const star1 = document.getElementById('star1');
   const star2 = document.getElementById('star2');
   const star3 = document.getElementById('star3');
@@ -116,7 +109,6 @@ const navRadioGroup = (evt) => {
 
   if (['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp'].includes(evt.key)) {
     evt.preventDefault();
-    // console.log('attempting return');
     if (evt.key === 'ArrowRight' || evt.key === 'ArrowDown') {
       switch(evt.target.id) {
         case 'star1':

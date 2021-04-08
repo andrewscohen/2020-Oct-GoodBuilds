@@ -4,8 +4,6 @@ const db = require('../db/models')
 const { csrfProtection, asyncHandler } = require('./utils')
 const { check, validationResult } = require('express-validator');
 
-
-/* GET home page. */
 router.get('/', csrfProtection, asyncHandler(async (req, res) => {
   const user = await db.User.build()
   res.render('home-page', {

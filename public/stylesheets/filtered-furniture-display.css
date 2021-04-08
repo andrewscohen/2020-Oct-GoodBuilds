@@ -15,11 +15,12 @@
   justify-content: center;
 }
 
-.furniture-type-page-layout{
+.furniture-type-page-layout {
   margin-top: 140px;
+  padding: 3em;
 }
 
-.fa-arrow-circle-right{
+.fa-arrow-circle-right {
   position: absolute;
   right: 15px;
   bottom: 15px;

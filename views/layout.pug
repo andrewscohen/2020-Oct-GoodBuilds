@@ -21,16 +21,7 @@ html
         span
           a(href='/'): img(src='/assets/cbRecLogo.svg' id='navbar_logo')
         div(class='navbar_login-right')
-          //- div(class='navbar-input-container')
-          //-   input(type='text' name='search' placeholder='Find a project' id="login_search")
-          //-   img(src='/assets/loupe.svg' id='icon_img')
           span(class='navbar_menu')
-            //- div(class='navbar_button'): a(href="/users/login" type='button')
-            //-   img(src='/assets/userLogo.svg' id='navbar_login--icon')
-            //-   label(id='navbar_login--icontext') Log In
-            //- div(class='navbar_button')
-            //-   form(action="/users/demo" method="post")
-            //-     button(type='submit' class='button-menu') Demo User
             div(class='logoutBtn')
               form(action='/users/logout' method='post')
                 div(class='navbar_button'): button(type='submit' class='button-menu') &#128736 Log Out
@@ -39,19 +30,10 @@ html
         span
           a(href='/'): img(src="/assets/cbRecLogo.svg" id='navbar_logo')
         div(class='navbar_login-right')
-          //- div(class='navbar-input-container')
-          //-   input(type='text' name='search' placeholder='Find a project' id="login_search")
-          //-   img(src='/assets/loupe.svg' id='icon_img')
           span(class='navbar_menu')
             div(class='navbar_button'): a(href="/users/login" type='button')
-              //- img(src='/assets/userLogo.svg' id='navbar_login--icon')
-              //- img(src='/assets/userLogo.svg' id='navbar_login--icon')
               label(id='navbar_login--icontext') &#128736 Log In
             div(class='navbar_button'): a(href="/users/register" type='button')
-              //- img(src='/assets/userLogo.svg' id='navbar_login--icon')
               label(id='navbar_login--icontext') &#128736 Sign Up
-            //- div(class='logoutBtn')
-            //-   form(action='/users/logout' method='post')
-            //-     div(class='navbar_button'): button(type='submit' class='button-menu') Log Out
 
   block content

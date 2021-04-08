@@ -2,7 +2,6 @@ extends layout
 include utils.pug
 
 block content
-  +validationErrorSummary(errors)
   div(class='background-img')
   div(class='login-container')
     div(class='login_box')
@@ -17,4 +16,5 @@ block content
           form(action="/users/demo" method="post")
             button(type='submit' class='button') Demo
       div(class='account-btn')
+        +validationErrorSummary(errors)
         a(href='/users/register') New here? Create a free account!

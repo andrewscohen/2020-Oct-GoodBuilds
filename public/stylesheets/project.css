@@ -3,8 +3,6 @@
 
 .projectcontainer {
   padding-top: 70px;
-  /* height: 100%; */
-  /* background-color: rgba(255, 255, 255, 0.9); */
 }
 
 .projectgrid {
@@ -15,9 +13,6 @@
 }
 
 img {
-  /* height: 65%;
-	width: 95%;
-	grid-column: 1; */
   align-self: center;
 }
 #furnitureimg {
@@ -117,7 +112,6 @@ dd {
 
 .inputReviewContainer textarea {
   width: 99%;
-  /* right: 20px; */
   align-self: center;
 }
 .difficultyLevelContainer,
