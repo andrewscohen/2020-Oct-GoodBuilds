@@ -26,7 +26,7 @@ block content
                                 i(class="fa fa-thermometer-quarter" aria-hidden="true") #{review.difficultyLevel}
                                 if locals.authenticated
                                     if userId === review.userId
-                                        button(id=`review-btn-${review.id}`) Edit
+                                        button(id=`review-btn-${review.id}` class='edit-btn') Edit
                                 else
                                     null
                         form(method='post' action='/project/reviews/update' id=`review-form-${review.id}` class="form-hide")
