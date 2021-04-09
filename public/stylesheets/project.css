@@ -3,13 +3,16 @@
 
 .projectcontainer {
   padding-top: 70px;
+  padding-bottom: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .projectgrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2em;
-  margin: 8%;
+  margin-top: 8%;
 }
 
 img {
@@ -20,22 +23,28 @@ img {
   height: 450px;
   background-size: cover;
   border-radius: 5px;
+  margin: auto;
+  display: block;
 }
 .rightcontainer {
   grid-column: 2;
   display: block;
-  width: 100%;
+  /* width: 100%; */
   background-color: rgba(255, 255, 255, 0.9);
   padding: 10px;
   margin-top: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 .leftcontainer {
   grid-column: 1;
   display: block;
-  width: 100%;
+  /* width: 100%; */
   background-color: rgba(255, 255, 255, 0.9);
   padding: 10px;
   margin-top: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .details {
@@ -63,6 +72,7 @@ img {
 .descriptiontext {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
+  margin: 5px;
 }
 
 dt {
@@ -96,10 +106,13 @@ dd {
 }
 
 .reviews {
+  margin-top: 2em;
   padding-top: 10px;
   font-family: "Montserrat", sans-serif;
-  margin-left: 10%;
-  margin-right: 10%;
+  /* margin-left: 10%;
+  margin-right: 10%; */
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 #projecttitle {
@@ -109,10 +122,12 @@ dd {
 .difficultyLevelContainer {
   display: block;
 }
-
+.inputReviewContainer{
+  display: flex;
+}
 .inputReviewContainer textarea {
-  width: 99%;
-  align-self: center;
+  width: 95%;
+  margin: auto;
 }
 .difficultyLevelContainer,
 .ratingContainer,
@@ -152,13 +167,15 @@ dd {
   font-family: "Montserrat", sans-serif;
 }
 .reviewbutton {
-  margin: 15px;
+  margin-left: auto;
+  margin-top: 15px;
 }
 .displayedReviews {
   padding-left: 20px;
   margin-bottom: 10px;
   border: 1px solid black;
   border-radius: 5px;
+  position: relative;
 }
 
 .userName {
@@ -181,6 +198,12 @@ dd {
   width: 45%;
   margin-right: 0;
   margin-left: auto;
+}
+
+.edit-btn{
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
 }
 
 .form-hide {
